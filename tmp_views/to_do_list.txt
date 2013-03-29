@@ -1,4 +1,1 @@
-join group
-approve group membership
-list group memberships for admins with reject buttons
 reset password

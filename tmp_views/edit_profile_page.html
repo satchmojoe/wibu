@@ -43,7 +43,7 @@
         <h1>Edit Joe's Profile</h1>
         <div style="border:1px solid black;float:left;margin:5px;width:70%">
           <h3>Joes Bio</h3>
-          <div style="float:left;margin:5px;width:100%">
+          <div style="float:left;margin:5px;width:98%">
             <h4><u>About Joe</u></h4>
             <textarea style="width:90%">
               Joe is the most amazing person on earth! He can do anything and is involved in everything! He is also really humble.
@@ -51,18 +51,20 @@
             <hr style="border-color:black">
             <h4><u>Joes Interests</u></h4>
             <ul>
-              <li>Walks along the beach</li>
-              <li>Receiving money</li>
-              <li>Making amazing software systems</li>
-              <li>Bragging about himself in class</li>
+              <li><input placeholder="Walks along the beach"></li>
+              <li><input placeholder="Receiving money"></li>
+              <li><input placeholder="Making amazing software systems"></li>
+              <li><input placeholder="Bragging about himself in class"></li>
+              <a href="#">Add</a>
             </ul>
             <hr style="border-color:black">
             <h4><u>Joes Areas of Expertise</u></h4>
             <ul>
-              <li>Ruby on Rails</li>
-              <li>SRS</li>
-              <li>Software Development</li>
-              <li>Javascript</li>
+              <li><select><option>Ruby on Rails</option></select></li>
+              <li><select><option>SRS</option></select></li>
+              <li><select><option>Software Development</option></select></li>
+              <li><select><option>Javascript</option></select></li>
+              <a href="#">Add</a>
             </ul>
           </div>
         </div>
@@ -71,25 +73,29 @@
           <div style="margin:5px">
             <u>Joe's Groups</u>
             <ul>
-              <li><a href ="#">Group 1</a></li>
-              <li><a href ="#">Group 2</a></li>
-              <li><a href ="#">Group 3</a></li>
-              <li><a href ="#">Group 4</a></li>
+              <li><a href ="#">Group 1</a><a href="#" style="float:right">Leave</a></li>
+              <li><a href ="#">Group 2</a><a href="#" style="float:right">Leave</a></li>
+              <li><a href ="#">Group 3</a><a href="#" style="float:right">Leave</a></li>
+              <li><a href ="#">Group 4</a><a href="#" style="float:right">Leave</a></li>
             </ul>
           </div>
           <div style="margin:5px">
             <u>Joe's Files</u>
             <ul>
-              <li><a href ="#">File_1.jpg</a></li>
-              <li><a href ="#">File_2.doc</a></li>
-              <li><a href ="#">File_3.csv</a></li>
-              <li><a href ="#">File_4.bug</a></li>
+              <li><a href ="#">File_1.jpg</a><a href="#" style="float:right">Remove</a></li>
+              <li><a href ="#">File_2.doc</a><a href="#" style="float:right">Remove</a></li>
+              <li><a href ="#">File_3.csv</a><a href="#" style="float:right">Remove</a></li>
+              <li><a href ="#">File_4.bug</a><a href="#" style="float:right">Remove</a></li>
             </ul>
           </div>
           <div>
             Upload File</br>
             <input type="file"></input>
 
+          </div>
+          <hr style="margin:5px;border-color:black">
+          <div>
+            <a href ="#">Change password</a>
           </div>
         </div>
       </div>
