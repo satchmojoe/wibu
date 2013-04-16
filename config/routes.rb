@@ -1,4 +1,16 @@
 Wibu::Application.routes.draw do
+  resources :institutions
+
+
+  resources :expertises
+
+
+  resources :interests
+
+
+  resources :users
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
