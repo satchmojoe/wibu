@@ -1,0 +1,99 @@
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" />
+<script src="bootstrap/js/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="#">WIBU</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="active"><a href="#">Joes Profile Page</a></li>
+            <li><a href="#">Create Group</a></li>
+            <li><a href="#">Upload</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Things <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Change Password</a></li>
+                <li><a href="#">Edit Profile</a></li>
+                <li class="divider"></li>
+                <li class="nav-header">Nav header</li>
+                <li><a href="#">Study Group 1</a></li>
+                <li><a href="#">Study Group 2</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form pull-right">
+            <input class="span2" type="search" placeholder="Search Term">
+            <button type="submit" class="btn">Search</button>
+          </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="width:80%">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" style="height:100%">
+        <h1>COSC 612</h1>
+        <h2>Project: WUBI</h2> 
+        
+        <div style="border:1px solid black;float:left;margin:5px;width:60%">
+          <h3>Create Task</h3>
+          <style type="text/css">
+            td {vertical-align:top;border:1px solid black;width:18%}
+          </style>
+          <div style="float:left;margin:5px">
+            <table>
+              <form>
+                <label>Title</label>
+                <input class="span2" type="search" placeholder="Title">
+                <label>Description</label>
+                <textarea class="span2" type="search" placeholder="Description"></textarea>
+                <label>Status</label>
+                <select><option>Defined</option><option>In Progress</option><option>Completed</option></select>
+                <label>Deadline</label>
+                <input class="span2" type="search" placeholder="Deadline">
+                <label>Owner</label>
+                <select><option>Joe</option><option>Aaron</option><option>Conor</option><option>Anonymous</option><option>Big Brother</option><option>Not-So-Big Mother</option><option>Member 8</option><option>Member 9</option></select>
+
+
+                </br><button type="submit" class="btn">Submit</button>
+                <button style="margin-left:10px" type="submit" class="btn">Cancel</button>
+              </form>
+            </table>
+          </div>
+        </div>
+
+        <div id="sidebar" style="border:1px solid black;text-align:centerwidth:30%;float:right;margin:5px">
+          <div style="margin:5px">
+            <u>COSC 612 Members</u>
+            <ul>
+              <li><a href ="#">Joe</a></li>
+              <li><a href ="#">Aaron</a></li>
+              <li><a href ="#">Conor</a></li>
+              <li><a href ="#">Anonymous</a></li>
+              <li><a href ="#">Big Brother</a></li>
+              <li><a href ="#">Not-So-Big Mother</a></li>
+              <li><a href ="#">Member 8</a></li>
+              <li><a href ="#">Member 9</a></li>
+            </ul>
+          </div>
+          <div style="margin:5px">
+            <u>COSC 612 Files</u>
+            <ul>
+              <li><a href ="#">File_1.jpg</a></li>
+              <li><a href ="#">File_2.doc</a></li>
+              <li><a href ="#">File_3.csv</a></li>
+              <li><a href ="#">File_4.bug</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
