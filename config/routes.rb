@@ -1,4 +1,19 @@
 Wibu::Application.routes.draw do
+  resources :tasks
+
+
+  resources :projects
+
+
+  resources :groups
+
+
+  resources :group_messages
+
+
+  resources :documents
+
+
   resources :institutions
 
 
