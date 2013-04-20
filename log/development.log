@@ -247,3 +247,2500 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (83.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130416001327)
+Migrating to CreateInterests (20130416002104)
+  [1m[35m (510.3ms)[0m  CREATE TABLE `interests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `text` varchar(255), `user_ids` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (65.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130416002104')[0m
+Migrating to CreateExpertises (20130416002117)
+  [1m[35m (353.7ms)[0m  CREATE TABLE `expertises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `text` varchar(255), `user_ids` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (51.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130416002117')[0m
+Migrating to CreateInstitutions (20130416002129)
+  [1m[35m (276.6ms)[0m  CREATE TABLE `institutions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `text` varchar(255), `user_ids` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (30.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130416002129')[0m
+Migrating to CreateDocuments (20130419201130)
+  [1m[35m (263.9ms)[0m  CREATE TABLE `documents` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `file_name` varchar(255), `user_id` int(11), `group_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (34.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419201130')[0m
+Migrating to CreateGroupMessages (20130419201324)
+  [1m[35m (311.4ms)[0m  CREATE TABLE `group_messages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `message` varchar(255), `group_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (41.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419201324')[0m
+Migrating to CreateGroups (20130419201453)
+  [1m[35m (264.7ms)[0m  CREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (30.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419201453')[0m
+Migrating to CreateProjects (20130419201633)
+  [1m[35m (298.9ms)[0m  CREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `group_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (30.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419201633')[0m
+Migrating to CreateTasks (20130419201802)
+  [1m[35m (332.0ms)[0m  CREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `project_id` int(11), `deadline` date, `status` varchar(255), `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (30.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419201802')[0m
+Migrating to InterestsUsers (20130419202354)
+  [1m[35m (286.4ms)[0m  CREATE TABLE `interests_users` (`interest_id` int(11), `user_id` int(11)) ENGINE=InnoDB
+  [1m[36m (32.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419202354')[0m
+Migrating to ExpertisesUsers (20130419202533)
+  [1m[35m (264.3ms)[0m  CREATE TABLE `expertises_users` (`expertises_id` int(11), `user_id` int(11)) ENGINE=InnoDB
+  [1m[36m (32.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419202533')[0m
+Migrating to InstitutionsUsers (20130419202546)
+  [1m[35m (325.5ms)[0m  CREATE TABLE `institutions_users` (`institution_id` int(11), `user_id` int(11)) ENGINE=InnoDB
+  [1m[36m (49.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419202546')[0m
+  [1m[35m (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-04-20 16:10:23 -0400
+Served asset /rails.png - 200 OK (45ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-20 16:10:54 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (5.9ms)
+Compiled documents.css  (65ms)  (pid 2765)
+Compiled expertises.css  (1ms)  (pid 2765)
+Compiled group_messages.css  (1ms)  (pid 2765)
+Compiled groups.css  (1ms)  (pid 2765)
+Compiled institutions.css  (1ms)  (pid 2765)
+Compiled interests.css  (1ms)  (pid 2765)
+Compiled projects.css  (1ms)  (pid 2765)
+Compiled session.css  (1ms)  (pid 2765)
+Compiled tasks.css  (1ms)  (pid 2765)
+Compiled application.css  (325ms)  (pid 2765)
+Compiled bootstrap/js/bootstrap.js  (1ms)  (pid 2765)
+Compiled bootstrap/js/bootstrap.min.js  (0ms)  (pid 2765)
+Compiled bootstrap/js/jquery.js  (43ms)  (pid 2765)
+Compiled documents.js  (825ms)  (pid 2765)
+Compiled expertises.js  (159ms)  (pid 2765)
+Compiled group_messages.js  (159ms)  (pid 2765)
+Compiled groups.js  (159ms)  (pid 2765)
+Compiled institutions.js  (159ms)  (pid 2765)
+Compiled interests.js  (160ms)  (pid 2765)
+Compiled projects.js  (158ms)  (pid 2765)
+Compiled session.js  (189ms)  (pid 2765)
+Compiled tasks.js  (160ms)  (pid 2765)
+Compiled application.js  (2606ms)  (pid 2765)
+Completed 200 OK in 5372ms (Views: 4831.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /application.css - 200 OK (68ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /expertises.css - 200 OK (2ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /documents.css - 200 OK (2ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /groups.css - 200 OK (2ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /group.css - 200 OK (2ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /group_messages.css - 200 OK (2ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /institutions.css - 200 OK (2ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /interests.css - 200 OK (2ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /project.css - 200 OK (4ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /projects.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /task.css - 200 OK (3ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /session.css - 200 OK (2ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /tasks.css - 200 OK (2ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /user.css - 200 OK (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /users.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /bootstrap/js/bootstrap.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /bootstrap/js/jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /documents.js - 200 OK (3ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /expertises.js - 200 OK (2ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /group.js - 200 OK (1ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:10:59 -0400
+Served asset /group_messages.js - 200 OK (52ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:00 -0400
+Served asset /groups.js - 200 OK (2ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:00 -0400
+Served asset /institutions.js - 200 OK (2ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:00 -0400
+Served asset /interests.js - 200 OK (2ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:00 -0400
+Served asset /project.js - 200 OK (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:00 -0400
+Served asset /projects.js - 200 OK (15ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:00 -0400
+Served asset /session.js - 200 OK (2ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:00 -0400
+Served asset /task.js - 200 OK (2ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:00 -0400
+Served asset /tasks.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:00 -0400
+Served asset /application.js - 200 OK (33ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:00 -0400
+Served asset /users.js - 200 OK (2ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:00 -0400
+Served asset /user.js - 200 OK (2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-04-20 16:11:14 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (210.1ms)
+  Rendered users/new.html.erb within layouts/application (682.9ms)
+Completed 200 OK in 1027ms (Views: 1005.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:15 -0400
+Served asset /application.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:15 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:15 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:15 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:15 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /project.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /user.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /bootstrap/js/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /bootstrap/js/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /project.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:11:16 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:11:37 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MdwFi8rtALMa21PV98REv5dWFsKcVnVrn8HKWbedKZM=", "user"=>{"user_name"=>"joe", "email"=>"test", "bio"=>"joe tbio", "city"=>"baltimore", "state"=>"md", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>"stuff", "expertises"=>"stuff", "institutions"=>"stuff"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 66ms
+
+NoMethodError (undefined method `each' for "stuff":String):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:15:35 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MdwFi8rtALMa21PV98REv5dWFsKcVnVrn8HKWbedKZM=", "user"=>{"user_name"=>"joe", "email"=>"test", "bio"=>"joe tbio", "city"=>"baltimore", "state"=>"md", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>"stuff", "expertises"=>"", "institutions"=>"\r\n"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `each' for "stuff":String):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:16:43 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MdwFi8rtALMa21PV98REv5dWFsKcVnVrn8HKWbedKZM=", "user"=>{"user_name"=>"joe", "email"=>"test", "bio"=>"joe tbio", "city"=>"baltimore", "state"=>"md", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>"", "expertises"=>"", "institutions"=>"\r\n"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `each' for "":String):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:16:52 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MdwFi8rtALMa21PV98REv5dWFsKcVnVrn8HKWbedKZM=", "user"=>{"user_name"=>"joe", "email"=>"test", "bio"=>"joe tbio", "city"=>"baltimore", "state"=>"md", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>"", "expertises"=>"", "institutions"=>""}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `each' for "":String):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:17:24 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MdwFi8rtALMa21PV98REv5dWFsKcVnVrn8HKWbedKZM=", "user"=>{"user_name"=>"joe", "email"=>"test", "bio"=>"joe tbio", "city"=>"baltimore", "state"=>"md", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>"1", "expertises"=>"1", "institutions"=>"1"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `each' for "1":String):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:17:34 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MdwFi8rtALMa21PV98REv5dWFsKcVnVrn8HKWbedKZM=", "user"=>{"user_name"=>"joe", "email"=>"test", "bio"=>"joe tbio", "city"=>"baltimore", "state"=>"md", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>"", "expertises"=>"", "institutions"=>""}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `each' for "":String):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.1ms)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `users` (`bio`, `city`, `created_at`, `email`, `expertises`, `institutions`, `interests`, `password_hash`, `password_salt`, `state`, `tmp_password_hash`, `updated_at`, `user_name`) VALUES (NULL, NULL, '2013-04-20 20:17:40', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2013-04-20 20:17:40', NULL)
+  [1m[36m (175.1ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-20 16:17:50 -0400
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` 
+  [1m[36mInterest Load (0.4ms)[0m  [1mSELECT `interests`.* FROM `interests` INNER JOIN `interests_users` ON `interests`.`id` = `interests_users`.`interest_id` WHERE `interests_users`.`user_id` = 1[0m
+  [1m[35mExpertise Load (0.6ms)[0m  SELECT `expertises`.* FROM `expertises` INNER JOIN `expertises_users` ON `expertises`.`id` = `expertises_users`.`expertise_id` WHERE `expertises_users`.`user_id` = 1
+Mysql2::Error: Unknown column 'expertises_users.expertise_id' in 'on clause': SELECT `expertises`.* FROM `expertises` INNER JOIN `expertises_users` ON `expertises`.`id` = `expertises_users`.`expertise_id` WHERE `expertises_users`.`user_id` = 1
+  Rendered users/index.html.erb within layouts/application (173.1ms)
+Completed 500 Internal Server Error in 178ms
+
+ActionView::Template::Error (Mysql2::Error: Unknown column 'expertises_users.expertise_id' in 'on clause': SELECT `expertises`.* FROM `expertises` INNER JOIN `expertises_users` ON `expertises`.`id` = `expertises_users`.`expertise_id` WHERE `expertises_users`.`user_id` = 1):
+    29:     <td><%= user.password_salt %></td>
+    30:     <td><%= user.tmp_password_hash %></td>
+    31:     <td><%= user.interests %></td>
+    32:     <td><%= user.expertises %></td>
+    33:     <td><%= user.institutions %></td>
+    34:     <td><%= link_to 'Show', user %></td>
+    35:     <td><%= link_to 'Edit', edit_user_path(user) %></td>
+  app/views/users/index.html.erb:32:in `block in _app_views_users_index_html_erb__1880012542793452669_33528140'
+  app/views/users/index.html.erb:21:in `each'
+  app/views/users/index.html.erb:21:in `_app_views_users_index_html_erb__1880012542793452669_33528140'
+  app/controllers/users_controller.rb:7:in `index'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (274.3ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (531.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (3.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateUsers (20130416001327)
+  [1m[35m (299.8ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_name` varchar(255), `email` varchar(255), `bio` varchar(255), `city` varchar(255), `state` varchar(255), `password_hash` varchar(255), `password_salt` varchar(255), `tmp_password_hash` varchar(255), `interests` text, `expertises` text, `institutions` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (40.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130416001327')[0m
+Migrating to CreateInterests (20130416002104)
+  [1m[35m (265.5ms)[0m  CREATE TABLE `interests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `text` varchar(255), `user_ids` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (41.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130416002104')[0m
+Migrating to CreateExpertises (20130416002117)
+  [1m[35m (276.6ms)[0m  CREATE TABLE `expertises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `text` varchar(255), `user_ids` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (42.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130416002117')[0m
+Migrating to CreateInstitutions (20130416002129)
+  [1m[35m (323.4ms)[0m  CREATE TABLE `institutions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `text` varchar(255), `user_ids` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (39.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130416002129')[0m
+Migrating to CreateDocuments (20130419201130)
+  [1m[35m (277.6ms)[0m  CREATE TABLE `documents` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `file_name` varchar(255), `user_id` int(11), `group_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (42.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419201130')[0m
+Migrating to CreateGroupMessages (20130419201324)
+  [1m[35m (265.6ms)[0m  CREATE TABLE `group_messages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `message` varchar(255), `group_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (42.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419201324')[0m
+Migrating to CreateGroups (20130419201453)
+  [1m[35m (324.3ms)[0m  CREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (38.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419201453')[0m
+Migrating to CreateProjects (20130419201633)
+  [1m[35m (266.5ms)[0m  CREATE TABLE `projects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `group_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (42.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419201633')[0m
+Migrating to CreateTasks (20130419201802)
+  [1m[35m (265.4ms)[0m  CREATE TABLE `tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `project_id` int(11), `deadline` date, `status` varchar(255), `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (42.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419201802')[0m
+Migrating to InterestsUsers (20130419202354)
+  [1m[35m (326.5ms)[0m  CREATE TABLE `interests_users` (`interest_id` int(11), `user_id` int(11)) ENGINE=InnoDB
+  [1m[36m (37.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419202354')[0m
+Migrating to ExpertisesUsers (20130419202533)
+  [1m[35m (266.7ms)[0m  CREATE TABLE `expertises_users` (`expertise_id` int(11), `user_id` int(11)) ENGINE=InnoDB
+  [1m[36m (42.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419202533')[0m
+Migrating to InstitutionsUsers (20130419202546)
+  [1m[35m (266.0ms)[0m  CREATE TABLE `institutions_users` (`institution_id` int(11), `user_id` int(11)) ENGINE=InnoDB
+  [1m[36m (42.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130419202546')[0m
+  [1m[35m (0.3ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-20 16:19:59 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 306ms (Views: 299.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /bootstrap/js/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /bootstrap/js/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:00 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-04-20 16:20:02 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (8.5ms)
+  Rendered users/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 355ms (Views: 331.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /group.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /task.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /bootstrap/js/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /bootstrap/js/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:20:03 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:20:15 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MdwFi8rtALMa21PV98REv5dWFsKcVnVrn8HKWbedKZM=", "user"=>{"user_name"=>"joe", "email"=>"test", "bio"=>"bio", "city"=>"city", "state"=>"state", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>"", "expertises"=>"", "institutions"=>""}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `each' for "":String):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:20:41 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MdwFi8rtALMa21PV98REv5dWFsKcVnVrn8HKWbedKZM=", "user"=>{"user_name"=>"joe", "email"=>"test", "bio"=>"bio", "city"=>"city", "state"=>"state", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>"1,2,3", "expertises"=>"1,2,3", "institutions"=>"1,2,3"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `each' for "1,2,3":String):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:21:09 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MdwFi8rtALMa21PV98REv5dWFsKcVnVrn8HKWbedKZM=", "user"=>{"user_name"=>"joe", "email"=>"test", "bio"=>"bio", "city"=>"city", "state"=>"state", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>"1,2,3", "expertises"=>"1,2,3", "institutions"=>"1,2,3"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 192437ms
+
+ActiveRecord::AssociationTypeMismatch (Interest(#70013000237260) expected, got Fixnum(#15777740)):
+  app/controllers/users_controller.rb:44:in `new'
+  app/controllers/users_controller.rb:44:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:24:26 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MdwFi8rtALMa21PV98REv5dWFsKcVnVrn8HKWbedKZM=", "user"=>{"user_name"=>"joe", "email"=>"test", "bio"=>"bio", "city"=>"city", "state"=>"state", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>"1,2,3", "expertises"=>"1,2,3", "institutions"=>"1,2,3"}, "commit"=>"Create User"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `interests` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:26:17', 'interest', '2013-04-20 20:26:17', NULL)
+  [1m[36m (187.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `expertises` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:27:22', 'expertise', '2013-04-20 20:27:22', NULL)[0m
+  [1m[35m (120.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `institutions` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:27:39', 'inst', '2013-04-20 20:27:39', NULL)
+  [1m[36m (269.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `institutions` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:28:33', 'inst', '2013-04-20 20:28:33', NULL)[0m
+  [1m[35m (108.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `institutions` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:30:04', 'inst', '2013-04-20 20:30:04', NULL)
+  [1m[36m (155.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `institutions` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:30:07', 'inst', '2013-04-20 20:30:07', NULL)[0m
+  [1m[35m (104.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `institutions` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:30:25', 'inst', '2013-04-20 20:30:25', NULL)
+  [1m[36m (120.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `expertises` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:30:42', 'expertise', '2013-04-20 20:30:42', NULL)[0m
+  [1m[35m (192.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `users` (`bio`, `city`, `created_at`, `email`, `expertises`, `institutions`, `interests`, `password_hash`, `password_salt`, `state`, `tmp_password_hash`, `updated_at`, `user_name`) VALUES ('bio', 'city', '2013-04-20 20:31:28', 'test', NULL, NULL, NULL, '', '', 'state', '', '2013-04-20 20:31:28', 'joe')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO `expertises_users` (`user_id`, `expertise_id`) VALUES (1, 2)[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO `institutions_users` (`user_id`, `institution_id`) VALUES (1, 5)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO `interests_users` (`user_id`, `interest_id`) VALUES (1, 1)[0m
+  [1m[35m (347.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 422953ms (ActiveRecord: 1621.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-04-20 16:31:28 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mInterest Load (0.5ms)[0m  SELECT `interests`.* FROM `interests` INNER JOIN `interests_users` ON `interests`.`id` = `interests_users`.`interest_id` WHERE `interests_users`.`user_id` = 1
+  [1m[36mExpertise Load (0.5ms)[0m  [1mSELECT `expertises`.* FROM `expertises` INNER JOIN `expertises_users` ON `expertises`.`id` = `expertises_users`.`expertise_id` WHERE `expertises_users`.`user_id` = 1[0m
+  [1m[35mInstitution Load (0.4ms)[0m  SELECT `institutions`.* FROM `institutions` INNER JOIN `institutions_users` ON `institutions`.`id` = `institutions_users`.`institution_id` WHERE `institutions_users`.`user_id` = 1
+  Rendered users/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 329ms (Views: 324.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /bootstrap/js/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /bootstrap/js/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /interests.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:31:29 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `interests` 
+  [1m[36mInterest Load (0.5ms)[0m  [1mSELECT `interests`.* FROM `interests` LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `expertises` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:34:11', 'expertise', '2013-04-20 20:34:11', NULL)[0m
+  [1m[35m (169.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `institutions` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:34:22', 'institution', '2013-04-20 20:34:22', NULL)
+  [1m[36m (118.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `interests` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:34:39', NULL, '2013-04-20 20:34:39', NULL)[0m
+  [1m[35m (164.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `expertises` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'expertise_0', '2013-04-20 20:38:01', NULL)
+  [1m[36m (96.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `institutions` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'institution_0', '2013-04-20 20:38:01', NULL)[0m
+  [1m[35m (41.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `interests` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'interest_0', '2013-04-20 20:38:01', NULL)
+  [1m[36m (29.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `expertises` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'expertise_1', '2013-04-20 20:38:01', NULL)[0m
+  [1m[35m (30.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `institutions` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'institution_1', '2013-04-20 20:38:01', NULL)
+  [1m[36m (30.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `interests` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'interest_1', '2013-04-20 20:38:01', NULL)[0m
+  [1m[35m (29.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `expertises` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'expertise_2', '2013-04-20 20:38:01', NULL)
+  [1m[36m (30.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `institutions` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'institution_2', '2013-04-20 20:38:01', NULL)[0m
+  [1m[35m (41.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `interests` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'interest_2', '2013-04-20 20:38:01', NULL)
+  [1m[36m (30.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `expertises` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'expertise_3', '2013-04-20 20:38:01', NULL)[0m
+  [1m[35m (30.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `institutions` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'institution_3', '2013-04-20 20:38:01', NULL)
+  [1m[36m (30.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `interests` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'interest_3', '2013-04-20 20:38:01', NULL)[0m
+  [1m[35m (29.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `expertises` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'expertise_4', '2013-04-20 20:38:01', NULL)
+  [1m[36m (30.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `institutions` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'institution_4', '2013-04-20 20:38:01', NULL)[0m
+  [1m[35m (30.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `interests` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'interest_4', '2013-04-20 20:38:01', NULL)
+  [1m[36m (30.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `expertises` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'expertise_5', '2013-04-20 20:38:01', NULL)[0m
+  [1m[35m (30.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `institutions` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'institution_5', '2013-04-20 20:38:01', NULL)
+  [1m[36m (30.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `interests` (`created_at`, `text`, `updated_at`, `user_ids`) VALUES ('2013-04-20 20:38:01', 'interest_5', '2013-04-20 20:38:01', NULL)[0m
+  [1m[35m (30.1ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `interests` [0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `expertises` 
+  [1m[36mExpertise Load (0.5ms)[0m  [1mSELECT `expertises`.* FROM `expertises` [0m
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-20 16:41:06 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  [1m[35mInterest Load (0.4ms)[0m  SELECT `interests`.* FROM `interests` INNER JOIN `interests_users` ON `interests`.`id` = `interests_users`.`interest_id` WHERE `interests_users`.`user_id` = 1
+  [1m[36mExpertise Load (0.4ms)[0m  [1mSELECT `expertises`.* FROM `expertises` INNER JOIN `expertises_users` ON `expertises`.`id` = `expertises_users`.`expertise_id` WHERE `expertises_users`.`user_id` = 1[0m
+  [1m[35mInstitution Load (0.4ms)[0m  SELECT `institutions`.* FROM `institutions` INNER JOIN `institutions_users` ON `institutions`.`id` = `institutions_users`.`institution_id` WHERE `institutions_users`.`user_id` = 1
+  Rendered users/index.html.erb within layouts/application (113.6ms)
+Completed 200 OK in 451ms (Views: 412.5ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /bootstrap/js/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /bootstrap/js/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:07 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Processing by UsersController#new as HTML
+  [1m[36mInstitution Load (0.4ms)[0m  [1mSELECT `institutions`.* FROM `institutions` [0m
+  Rendered users/_form.html.erb (59.3ms)
+  Rendered users/new.html.erb within layouts/application (60.4ms)
+Completed 200 OK in 371ms (Views: 370.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /bootstrap/js/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /bootstrap/js/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:11 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:41:12 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Processing by UsersController#new as HTML
+  [1m[35mInstitution Load (0.2ms)[0m  SELECT `institutions`.* FROM `institutions` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `institutions`.* FROM `institutions` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `institutions`.* FROM `institutions` 
+  Rendered users/_form.html.erb (15.5ms)
+  Rendered users/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 333ms (Views: 331.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /expertises.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /user.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /bootstrap/js/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /bootstrap/js/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:34 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:35 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:35 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:35 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:35 -0400
+Served asset /task.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:35 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:35 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:35 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:35 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:42:35 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+  [1m[35mInterest Load (0.4ms)[0m  SELECT `interests`.* FROM `interests` 
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Processing by UsersController#new as HTML
+  [1m[36mInstitution Load (0.2ms)[0m  [1mSELECT `institutions`.* FROM `institutions` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `institutions`.* FROM `institutions` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `institutions`.* FROM `institutions` [0m
+  Rendered users/_form.html.erb (22.0ms)
+  Rendered users/new.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 483ms (Views: 482.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /bootstrap/js/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /bootstrap/js/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:09 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:10 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:10 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:10 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:10 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:10 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:10 -0400
+Served asset /task.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:10 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:10 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:10 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:10 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:10 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:10 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Processing by UsersController#new as HTML
+  [1m[35mInstitution Load (0.2ms)[0m  SELECT `institutions`.* FROM `institutions` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `institutions`.* FROM `institutions` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `institutions`.* FROM `institutions` 
+  Rendered users/_form.html.erb (18.3ms)
+  Rendered users/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 438ms (Views: 437.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /expertises.css - 200 OK (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /groups.css - 200 OK (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /documents.css - 200 OK (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /project.css - 200 OK (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /institutions.css - 200 OK (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /group_messages.css - 200 OK (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /interests.css - 200 OK (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /projects.css - 200 OK (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /group.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /session.css - 200 OK (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /task.css - 200 OK (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /tasks.css - 200 OK (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /user.css - 200 OK (65ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /users.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /bootstrap/js/bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /bootstrap/js/jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /documents.js - 200 OK (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /expertises.js - 200 OK (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /group.js - 200 OK (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /group_messages.js - 200 OK (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /groups.js - 200 OK (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:13 -0400
+Served asset /institutions.js - 200 OK (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:14 -0400
+Served asset /interests.js - 200 OK (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:14 -0400
+Served asset /project.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:14 -0400
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:14 -0400
+Served asset /task.js - 200 OK (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:14 -0400
+Served asset /tasks.js - 200 OK (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:14 -0400
+Served asset /session.js - 200 OK (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:14 -0400
+Served asset /user.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:14 -0400
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:44:14 -0400
+Served asset /application.js - 200 OK (2ms)
+  [1m[36mInterest Load (0.3ms)[0m  [1mSELECT `interests`.* FROM `interests` [0m
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mUPDATE `interests` SET `text` = 'interest_1', `updated_at` = '2013-04-20 20:46:16' WHERE `interests`.`id` = 1[0m
+  [1m[35m (3581.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (5414.0ms)[0m  UPDATE `interests` SET `text` = 'interest_2', `updated_at` = '2013-04-20 20:46:20' WHERE `interests`.`id` = 2
+  [1m[36m (6277.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE `interests` SET `text` = 'interest_3', `updated_at` = '2013-04-20 20:46:32' WHERE `interests`.`id` = 3[0m
+  [1m[35m (253.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  UPDATE `interests` SET `text` = 'interest_4', `updated_at` = '2013-04-20 20:46:32' WHERE `interests`.`id` = 4
+  [1m[36m (84.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE `interests` SET `text` = 'interest_5', `updated_at` = '2013-04-20 20:46:32' WHERE `interests`.`id` = 5[0m
+  [1m[35m (31.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  UPDATE `interests` SET `text` = 'interest_6', `updated_at` = '2013-04-20 20:46:32' WHERE `interests`.`id` = 6
+  [1m[36m (43.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE `interests` SET `text` = 'interest_7', `updated_at` = '2013-04-20 20:46:32' WHERE `interests`.`id` = 7[0m
+  [1m[35m (40.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  UPDATE `interests` SET `text` = 'interest_8', `updated_at` = '2013-04-20 20:46:32' WHERE `interests`.`id` = 8
+  [1m[36m (32.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mInterest Load (1.3ms)[0m  SELECT `interests`.* FROM `interests` 
+  [1m[36mInstitution Load (37.8ms)[0m  [1mSELECT `institutions`.* FROM `institutions` [0m
+  [1m[35mExpertise Load (0.2ms)[0m  SELECT `expertises`.* FROM `expertises` 
+Connecting to database specified by database.yml
+
+
+Started GET "/users" for 127.0.0.1 at 2013-04-20 16:52:32 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` [0m
+  [1m[35mInterest Load (0.4ms)[0m  SELECT `interests`.* FROM `interests` INNER JOIN `interests_users` ON `interests`.`id` = `interests_users`.`interest_id` WHERE `interests_users`.`user_id` = 1
+  [1m[36mExpertise Load (0.1ms)[0m  [1mSELECT `expertises`.* FROM `expertises` INNER JOIN `expertises_users` ON `expertises`.`id` = `expertises_users`.`expertise_id` WHERE `expertises_users`.`user_id` = 1[0m
+  [1m[35mInstitution Load (0.2ms)[0m  SELECT `institutions`.* FROM `institutions` INNER JOIN `institutions_users` ON `institutions`.`id` = `institutions_users`.`institution_id` WHERE `institutions_users`.`user_id` = 1
+  Rendered users/index.html.erb within layouts/application (227.9ms)
+Completed 200 OK in 851ms (Views: 675.2ms | ActiveRecord: 52.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /application.css - 200 OK (33ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /documents.css - 200 OK (2ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /group.css - 200 OK (2ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /groups.css - 200 OK (2ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /expertises.css - 200 OK (4ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /group_messages.css - 200 OK (2ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /institutions.css - 200 OK (2ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /interests.css - 200 OK (1ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /project.css - 200 OK (2ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /projects.css - 200 OK (2ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /session.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /scaffolds.css - 200 OK (2ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /task.css - 200 OK (2ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /tasks.css - 200 OK (2ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /user.css - 200 OK (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /users.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /bootstrap/js/bootstrap.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /bootstrap/js/jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 200 OK (2ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /documents.js - 200 OK (2ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /expertises.js - 200 OK (4ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /group.js - 200 OK (5ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /group_messages.js - 200 OK (2ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /groups.js - 200 OK (2ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /institutions.js - 200 OK (2ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /interests.js - 200 OK (1ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /project.js - 200 OK (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /projects.js - 200 OK (4ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /task.js - 200 OK (3ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /session.js - 200 OK (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /users.js - 200 OK (2ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /tasks.js - 200 OK (1ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /user.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:33 -0400
+Served asset /application.js - 200 OK (88ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Processing by UsersController#new as HTML
+  [1m[36mInterest Load (0.2ms)[0m  [1mSELECT `interests`.* FROM `interests` [0m
+  [1m[35mExpertise Load (0.2ms)[0m  SELECT `expertises`.* FROM `expertises` 
+  [1m[36mInstitution Load (0.2ms)[0m  [1mSELECT `institutions`.* FROM `institutions` [0m
+  Rendered users/_form.html.erb (48.2ms)
+  Rendered users/new.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 391ms (Views: 389.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /project.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /bootstrap/js/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /bootstrap/js/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /task.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:52:36 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:53:02 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6loUM/3xSapAcHYv5dU47nhquldRa3niR9tn57TCBhc=", "user"=>{"user_name"=>"test", "email"=>"test", "bio"=>"test", "city"=>"teas", "state"=>"test", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>["", "2", "3"], "expertises"=>["", "3"], "institutions"=>["", "2"]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::AssociationTypeMismatch (Interest(#69951629087240) expected, got String(#12778860)):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:56:47 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6loUM/3xSapAcHYv5dU47nhquldRa3niR9tn57TCBhc=", "user"=>{"user_name"=>"test", "email"=>"test", "bio"=>"test", "city"=>"teas", "state"=>"test", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>["", "2", "3"], "expertises"=>["", "3"], "institutions"=>["", "2"]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 22425ms
+
+NoMethodError (undefined method `parse_params_for_habtms' for #<Class:0x007f3db4079a10>):
+  app/controllers/users_controller.rb:44:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:57:14 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6loUM/3xSapAcHYv5dU47nhquldRa3niR9tn57TCBhc=", "user"=>{"user_name"=>"test", "email"=>"test", "bio"=>"test", "city"=>"teas", "state"=>"test", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>["", "2", "3"], "expertises"=>["", "3"], "institutions"=>["", "2"]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 6254ms
+
+NoMethodError (undefined method `parse_params_for_habtms' for #<Class:0x007f3db4079a10>):
+  app/controllers/users_controller.rb:44:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2013-04-20 16:57:26 -0400
+Processing by UsersController#new as HTML
+  [1m[35mInterest Load (0.1ms)[0m  SELECT `interests`.* FROM `interests` 
+  [1m[36mExpertise Load (0.1ms)[0m  [1mSELECT `expertises`.* FROM `expertises` [0m
+  [1m[35mInstitution Load (0.1ms)[0m  SELECT `institutions`.* FROM `institutions` 
+  Rendered users/_form.html.erb (72.5ms)
+  Rendered users/new.html.erb within layouts/application (73.8ms)
+Completed 200 OK in 451ms (Views: 381.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /group.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /bootstrap/js/bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/jquery.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /bootstrap/js/jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap/js/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /bootstrap/js/bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /user.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-20 16:57:27 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:57:45 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6loUM/3xSapAcHYv5dU47nhquldRa3niR9tn57TCBhc=", "user"=>{"user_name"=>"test", "email"=>"HGJH", "bio"=>"HGH", "city"=>"GJHG", "state"=>"hgh", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>["", "1", "2", "3"], "expertises"=>["", "1", "2", "3"], "institutions"=>["", "1", "2", "3"]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 23135ms
+
+NoMethodError (undefined method `parse_params_for_habtms' for #<Class:0x007f3db4079a10>):
+  app/controllers/users_controller.rb:44:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:58:41 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6loUM/3xSapAcHYv5dU47nhquldRa3niR9tn57TCBhc=", "user"=>{"user_name"=>"test", "email"=>"HGJH", "bio"=>"HGH", "city"=>"GJHG", "state"=>"hgh", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>["", "1", "2", "3"], "expertises"=>["", "1", "2", "3"], "institutions"=>["", "1", "2", "3"]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 4622ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/users_controller.rb:44:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:58:58 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6loUM/3xSapAcHYv5dU47nhquldRa3niR9tn57TCBhc=", "user"=>{"user_name"=>"test", "email"=>"HGJH", "bio"=>"HGH", "city"=>"GJHG", "state"=>"hgh", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>["", "1", "2", "3"], "expertises"=>["", "1", "2", "3"], "institutions"=>["", "1", "2", "3"]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 189ms
+
+ActiveRecord::AssociationTypeMismatch (Interest(#35015420) expected, got String(#13657440)):
+  app/controllers/users_controller.rb:43:in `new'
+  app/controllers/users_controller.rb:43:in `create'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-20 16:59:11 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6loUM/3xSapAcHYv5dU47nhquldRa3niR9tn57TCBhc=", "user"=>{"user_name"=>"test", "email"=>"HGJH", "bio"=>"HGH", "city"=>"GJHG", "state"=>"hgh", "password_hash"=>"[FILTERED]", "password_salt"=>"[FILTERED]", "tmp_password_hash"=>"[FILTERED]", "interests"=>["", "1", "2", "3"], "expertises"=>["", "1", "2", "3"], "institutions"=>["", "1", "2", "3"]}, "commit"=>"Create User"}
+  [1m[36mInterest Load (0.4ms)[0m  [1mSELECT `interests`.* FROM `interests` WHERE `interests`.`id` = 0 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `interests`.* FROM `interests` WHERE `interests`.`id` = 0 LIMIT 1
+  [1m[36mInterest Load (0.6ms)[0m  [1mSELECT `interests`.* FROM `interests` WHERE `interests`.`id` = 1 LIMIT 1[0m
+  [1m[35mInterest Load (0.4ms)[0m  SELECT `interests`.* FROM `interests` WHERE `interests`.`id` = 2 LIMIT 1
+  [1m[36mInterest Load (0.4ms)[0m  [1mSELECT `interests`.* FROM `interests` WHERE `interests`.`id` = 3 LIMIT 1[0m

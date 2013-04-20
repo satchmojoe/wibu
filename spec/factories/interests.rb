@@ -3,6 +3,5 @@
 FactoryGirl.define do
   factory :interest do
     text "MyString"
-    user_ids "MyText"
   end
 end

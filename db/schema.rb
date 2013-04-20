@@ -11,7 +11,84 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130416001327) do
+ActiveRecord::Schema.define(:version => 20130419202546) do
+
+  create_table "documents", :force => true do |t|
+    t.string   "file_name"
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "expertises", :force => true do |t|
+    t.string   "text"
+    t.text     "user_ids"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "expertises_users", :id => false, :force => true do |t|
+    t.integer "expertise_id"
+    t.integer "user_id"
+  end
+
+  create_table "group_messages", :force => true do |t|
+    t.string   "message"
+    t.integer  "group_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "groups", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "institutions", :force => true do |t|
+    t.string   "text"
+    t.text     "user_ids"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "institutions_users", :id => false, :force => true do |t|
+    t.integer "institution_id"
+    t.integer "user_id"
+  end
+
+  create_table "interests", :force => true do |t|
+    t.string   "text"
+    t.text     "user_ids"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "interests_users", :id => false, :force => true do |t|
+    t.integer "interest_id"
+    t.integer "user_id"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "group_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "tasks", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "project_id"
+    t.date     "deadline"
+    t.string   "status"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "user_name"

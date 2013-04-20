@@ -7,4 +7,9 @@ class User < ActiveRecord::Base
   has_many :documents
   has_many :group_memberships
   has_many :tasks
+
+  def self.parse_params_for_habtms params
+    params[:user]["interests"] = params[:user]["interests"].map{ |i| (i.empty? ? nil : Interest.find(i.to_i)) }
+    params
+  end
 end

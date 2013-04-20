@@ -1,7 +1,7 @@
 class ExpertisesUsers < ActiveRecord::Migration
   def up
     create_table :expertises_users, :id => false do |t|
-      t.integer :expertises_id
+      t.integer :expertise_id
       t.integer :user_id
     end
   end
