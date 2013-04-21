@@ -34,7 +34,7 @@ Wibu::Application.routes.draw do
   put "/sessions/update_password"
 
   resources :sessions
-  root :to => "sessions#welcome"
+  root :to => "users#show"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

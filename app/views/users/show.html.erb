@@ -1,60 +1,70 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>User name:</b>
-  <%= @user.user_name %>
-</p>
+<h1><%= @user.user_name.capitalize%>'s Profile</h1>
+<div style="border:1px solid black;float:left;margin:5px;width:70%">
+  <h3><%= @user.user_name.capitalize%>'s Bio</h3>
+  <div style="float:left;margin:5px">
+    <h4><u>About <%= @user.user_name.capitalize%></u></h4>
+    <p>
+      <%= @user.bio %>
+    </p>
+    <hr style="border-color:black">
+    
+    <h4><u><%= @user.user_name.capitalize%>'s Interests</u></h4>
+    <ul>
+      <% unless @user.interests.empty?%>
+        <% @user.interests.each do |int| %>
+          <li><%= int.text %></liv>
+        <% end %>
+      <% end %>
+    </ul>
+    <hr style="border-color:black">
+    
+    <h4><u><%= @user.user_name.capitalize%>'s Areas of Expertise</u></h4>
+    <ul>
+      <% unless @user.institutions.empty?%>
+        <% @user.institutions.each do |int| %>
+          <li><%= int.text %></liv>
+        <% end %>
+      <% end %>
+    </ul>
+    <hr style="border-color:black">
+    
+    <h4><u><%= @user.user_name.capitalize%>'s Institutions</u></h4>
+    <ul>
+      <% unless @user.expertises.empty?%>
+        <% @user.expertises.each do |int| %>
+          <li><%= int.text %></liv>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+<div id="sidebar" style="border:1px solid black;text-align:centerwidth:30%;float:right">
+  <div style="margin:5px">
+    <u><%= @user.user_name.capitalize%>'s Groups</u>
+    <ul>
+      <% unless @user.groups.empty?%>
+        <% @user.groups.each do |int| %>
+          <li><%= int.text %></liv>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div style="margin:5px">
+    <u><%= @user.user_name.capitalize%>'s Files</u>
+    <ul>
+      <% unless @user.files.empty?%>
+        <% @user.files.each do |int| %>
+          <li><%= int.text %></liv>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div>
+    Upload File</br>
+    <input type="file"></input>
 
-<p>
-  <b>Bio:</b>
-  <%= @user.bio %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @user.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @user.state %>
-</p>
-
-<p>
-  <b>Password hash:</b>
-  <%= @user.password_hash %>
-</p>
-
-<p>
-  <b>Password salt:</b>
-  <%= @user.password_salt %>
-</p>
-
-<p>
-  <b>Tmp password hash:</b>
-  <%= @user.tmp_password_hash %>
-</p>
-
-<p>
-  <b>Interests:</b>
-  <%= @user.interests %>
-</p>
-
-<p>
-  <b>Expertises:</b>
-  <%= @user.expertises %>
-</p>
-
-<p>
-  <b>Institutions:</b>
-  <%= @user.institutions %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  </div>
+</div>

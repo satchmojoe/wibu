@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :bio, :city, :email, :expertises, :institutions, :interests, :password, :password_confirmation, :state, :user_name
+  attr_accessible :bio, :city, :email, :expertises, :institutions, :interests, :password, :password_confirmation, :state, :user_name, :group_memberships
   has_and_belongs_to_many :expertises
   has_and_belongs_to_many :institutions
   has_and_belongs_to_many :interests
@@ -13,8 +13,15 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
 
+  def groups
+    self.group_memberships.map{ |m| Group.find(m.group_id) }
+  end
+
   def self.parse_params_for_habtms params
-    params[:user]["interests"] = params[:user]["interests"].map{ |i| (i.empty? ? nil : Interest.find(i.to_i)) }
+    binding.pry
+    params[:user]["interests"] = params[:user]["interests"].map{ |i| (i.empty? ? nil : Interest.find(i.to_i))}.delete_if{|x| x == nil}
+    params[:user]["institutions"] = params[:user]["institutions"].map{ |i| (i.empty? ? nil : Institution.find(i.to_i))}.delete_if{|x| x == nil}
+    params[:user]["expertises"] = params[:user]["expertises"].map{ |i| (i.empty? ? nil : Expertise.find(i.to_i))}.delete_if{|x| x == nil}
     params
   end
 
