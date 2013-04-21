@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_filter :log_in, :only => [:new, :create]
+
   # GET /users
   # GET /users.json
   def index
@@ -40,10 +42,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    binding.pry
-
     @user = User.new(params[:user])
-
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }

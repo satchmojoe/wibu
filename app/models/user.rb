@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  attr_accessible :bio, :city, :email, :expertises, :institutions, :interests, :password_hash, :password_salt, :state, :tmp_password_hash, :user_name
+  attr_accessor :password
+  attr_accessible :bio, :city, :email, :expertises, :institutions, :interests, :password, :password_confirmation, :state, :user_name
   has_and_belongs_to_many :expertises
   has_and_belongs_to_many :institutions
   has_and_belongs_to_many :interests
@@ -8,8 +9,30 @@ class User < ActiveRecord::Base
   has_many :group_memberships
   has_many :tasks
 
+  before_save :encrypt_password
+  validates_confirmation_of :password
+  validates_presence_of :password, :on => :create
+
   def self.parse_params_for_habtms params
     params[:user]["interests"] = params[:user]["interests"].map{ |i| (i.empty? ? nil : Interest.find(i.to_i)) }
     params
+  end
+
+  def encrypt_password
+    if password.present?
+      self.password_salt = BCrypt::Engine.generate_salt
+      self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
+    end
+  end
+
+
+
+  def self.authenticate(user_name, password)
+    user = find_by_user_name(user_name)
+    if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
+      user
+    else
+      nil
+    end
   end
 end

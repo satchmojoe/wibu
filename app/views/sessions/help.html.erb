@@ -1,0 +1,179 @@
+<head>
+  <style type="text/css">
+    img {width:990px;border:solid black 1px;}
+    p {font-size:1.3em}
+  </style>
+</head>
+<body>
+  <h1 id="top"><b>BSOGrader User Guide</b></h1>
+
+  <ul>
+    <h2>General Users Topics:</h2>
+      <li><a href="#login">Log in</a></li>
+    <h2>Administrator Topics:</h2>
+      <li><a href="#cr_users">Creating Users</a></li>
+      <li><a href="#cr_kitahs">Creating Kitahs</a></li>
+      <li><a href="#enter_students">Entering Students</a></li>
+      <li><a href="#create_grade_fields">Creating Grade Fields</a></li>
+      <li><a href="#add_grade_fields">Adding Grade Fields to Kitah</a></li>
+      <li><a href="#enter_grades">Entering Grades For A Student</a></li>
+      <li><a href="#enter_grades_class">Entering Grades For A Kitah</a></li>
+    <!-- 
+    <li></li>
+    <li></li>
+    <li></li>
+
+    -->
+  </ul>
+  </br>
+  <div id="login"></div> 
+  <h2>Log in</h2>
+  <%= image_tag "welcome.png" %>
+  </br>
+  <p>From the welcome page, click 'log in'.</p>
+  </br>
+  </br>
+  </br>
+  <%= image_tag "login.png"%>
+  </br>
+  <p>Enter your user name and password in the log in fields. If you do not know these, ask the site administrator (most likely the school principal). Then press "log in".</p>
+  <a href="#top">Back to top</a>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  <div id="cr_users"></div> 
+  <a href="#top">Back to top</a>
+  <h2>Creating Users</h2>
+  <%= image_tag "new_user_link.png"%>
+  <p>To create users, you must be logged in as an administrator. Begin by clicking the "Users" link at the top of your screen. If you do not see this link, you are not signed in as an administrator. This takes you to a list of all the current users. At the bottom of the list, there is a link to "New user". Click this link </p>
+  <%= image_tag "new_user_form.png"%>
+  <p> You are now looking at the new user form. Fill out the form for the user you want to create. Take note of the username and password you enter, as this will be the log in credentials for this user. Also, make sure you select the correct role for the user. An administrator has full access to all the entries in the application, including attendance and grades. A teacher has access to view their own students and change their grades. A service administrator (svc_admin) can view and update students services attendance. If you indicate that a user is a teacher, you will have the option of associating them with a kitah each time you create a new kitah. Once you are done, click "Create User". The user will be created and you will see the updated list of users. If the user is not created, a message will show at the top of the page explaining why.</p>
+  <a href="#top">Back to top</a>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  <div id="cr_kitahs"></div> 
+  <a href="#top">Back to top</a>
+  <h2>Creating Kitahs</h2>
+  <%= image_tag "new_kitah_index.png"%>
+  <p>To create a new kitah, you must be logged in as an administrator. Begin by clicking the "Kitahs" link at the top of your screen.  At the bottom of the list, there is a link to "New kitah". Click this link </p>
+  <%= image_tag "create_kitah.png"%>
+  <p>You are now looking at the new kitah form. Select one or more teachers from the list provided. If you need a teacher who is not listed, check their user role and make sure it is set to 'teacher'. You can select multiple teachers by holding the 'control' (sometimes written as 'ctrl') button on your keyboard while clicking each teacher. Next type in the name of the Kitah. This name must be unique to the kitah. You also have the option of selecting the grade fields for this kitah. Again, select more than one by holding 'control' while clicking each desired field. These fields will be show up on the report cards for the students in this kitah. The selected teachers will be able to enter grades for these fields for the students in this kitah. When you are done, press the "create kitah" button. You will then see the created kitah and its information, including students. The kitah was just created so there will not be students.
+  <a href="#top">Back to top</a>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  <div id="enter_students"></div> 
+  <a href="#top">Back to top</a>
+  <h2>Entering Students</h2>
+  <%= image_tag "admin_students.png"%>
+  <p>To enter a new student, you must be logged in as an administrator. Begin by clicking the "Students" link at the top of your screen.  At the bottom of the list, there is a link to "New Student". Click this link </p>
+  <%= image_tag "student_form.png"%>
+  <p>You are now looking at the new student form. Enter the students information on the fields provided. Note that the grade field represents the numeric grade they are in (ie: enter 1 for a 1st grade student, 5 for a 5th grade student). Next, select the kitah the student will be in. When you are done entering the information, press "create student".</p>
+  <a href="#top">Back to top</a>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  <div id="create_grade_fields"></div> 
+  <a href="#top">Back to top</a>
+  <h2>Creating Grade Fields</h2>
+  <%= image_tag "grade_fields_index.png"%>
+  <P>To create a new Grade Field, you must be logged in as an administrator. Begin by clicking "Grade Fields" at the top of your screen. This will bring up the Grade Fields Index page. Click the "create new grade field" link at the bottom of the screen. Existing Grade Fields can be edited from this page by typing in a new name for them and pressing 'update' at the bottom of the screen.</p>
+  <%= image_tag "create_grade_fields.png"%>
+  <p>This brings up the page shown above, where you can enter the name of the new Grade Field. After entering the name, press 'Create Grade Field'. This will create the Grade Field and return you to the previous index page, showing the new Grade Field added to the list. If you want to remove the grade field, click the "Archive" link next to it. This keeps the grade field from showing up on the list. However, if students have grades for this gradefield, those grades will remain for those students.</p>
+  <a href="#top">Back to top</a>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  <div id="add_grade_fields"></div> 
+  <a href="#top">Back to top</a>
+  <h2>Adding Grade Fields to Kitah</h2>
+  <%= image_tag "edit_kitah.png"%>
+  <P>To create a new Grade Field, you must be logged in as an administrator. Begin by clicking "Kitahs" at the top of your screen. This will bring up the Kitahs Index page. Click the "edit" link next to the Kitah you want to add Grade Fields to. This opens the Edit Kitah page seen above.</p>
+  <%= image_tag "multiple_grade_fields_selected.png"%>
+  <p>On this page, you see the list of available Grade Fields at the bottom. Only the selected Grade Fields will be attributed to this Kitah. If you want to select more than one, press and hold the "control" key on your keyboard then click each Grade Field you want to add. Then release the "control" key and click "Update Kitah". You will now see the Kitah with the updated list of Grade Fields.</p>
+  <a href="#top">Back to top</a>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  <div id="enter_grades"></div> 
+  <a href="#top">Back to top</a>
+  <h2>Entering Grades For A Student</h2>
+  <%= image_tag "select_student_for_grades.png"%>
+  <P>To enter grades for a student, you must be logged in as an administrator or a teacher. Begin by clicking "Student Grades" at the top of your screen. This will bring up the Students Grades Index page. Select the student whose grades you want to change from the drop-down menu and press 'Go'. This will take you to the students' grade page. If no grades have been entered yet, this page will be blank. Click the 'edit grades' link to continue to edit the grades.</p>
+  <%= image_tag "edit_student_grades.png"%>
+  <p>This page shows the Grade Fields available for the student and their current grades, if any. Enter or change the grades as needed. When done, press "update". This taks you back to the students' grade page and show the updated grades.</p>
+  <a href="#top">Back to top</a>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  <div id="enter_grades_class"></div> 
+  <a href="#top">Back to top</a>
+  <h2>Entering Grades For A Kitah</h2>
+  <%= image_tag "kitah_students_for_grade_change.png"%>
+  <P>To enter grades for a Kitah, you must be logged in as an administrator or a teacher. Begin by clicking "Kitahs" at the top of your screen. This will bring up the Kitahs Index page. Find the Kitah whose grades you want to change and click on "show". This will take you to the kitah's page. Select the first student whose grades you want to change and click the "Edit Grades" link as shown above. This takes you to the student's grade page. Follow the instructions above for editing the grades. After updating the grades and returning to the student's grade page, click the link to return to their kitah's index page. Repeat for the remaining students.</p>
+  <a href="#top">Back to top</a>
+</body>

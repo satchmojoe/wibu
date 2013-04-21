@@ -1,3 +1,7 @@
+<style type="text/css">
+td {text-align:center}
+</style>
+
 <h1>Listing users</h1>
 
 <table>
@@ -28,9 +32,9 @@
     <td><%= user.password_hash %></td>
     <td><%= user.password_salt %></td>
     <td><%= user.tmp_password_hash %></td>
-    <td><%= user.interests %></td>
-    <td><%= user.expertises %></td>
-    <td><%= user.institutions %></td>
+    <td style="width:200px" ><%= collection_display user.interests %></td>
+    <td style="width:200px" ><%= collection_display user.expertises %></td>
+    <td style="width:200px" ><%= collection_display user.institutions %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

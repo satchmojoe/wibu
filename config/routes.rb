@@ -26,6 +26,15 @@ Wibu::Application.routes.draw do
   resources :users
 
 
+  get "welcome" => "sessions#welcome", :as => "welcome"
+  get "help" => "sessions#help", :as => "help"
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "change_password" => "sessions#change_password", :as => "change_password"
+  put "/sessions/update_password"
+
+  resources :sessions
+  root :to => "sessions#welcome"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
