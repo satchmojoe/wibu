@@ -55,8 +55,8 @@
   <div style="margin:5px">
     <u><%= @user.user_name.capitalize%>'s Files</u>
     <ul>
-      <% unless @user.files.empty?%>
-        <% @user.files.each do |int| %>
+      <% unless @user.documents.empty?%>
+        <% @user.documents.each do |int| %>
           <li><%= int.text %></liv>
         <% end %>
       <% end %>

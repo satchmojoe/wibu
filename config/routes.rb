@@ -1,4 +1,7 @@
 Wibu::Application.routes.draw do
+  resources :group_memberships
+
+
   resources :tasks
 
 
