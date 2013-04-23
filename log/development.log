@@ -43671,3 +43671,4316 @@ Served asset /task.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 20:28:43 -0400
 Served asset /application.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `users` 
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mUPDATE `users` SET `email` = 'justjoe02@yahoo.com', `updated_at` = '2013-04-23 01:06:18' WHERE `users`.`id` = 21[0m
+  [1m[35m (174.0ms)[0m  COMMIT
+
+
+Started GET "/forgot_pw" for 127.0.0.1 at 2013-04-22 21:09:23 -0400
+Processing by UsersController#forgot_pw as HTML
+  Rendered users/forgot_pw.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 327ms (Views: 326.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 21:09:24 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/retrieve_pw" for 127.0.0.1 at 2013-04-22 21:09:29 -0400
+Processing by UsersController#retrieve_pw as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "email"=>"justjoe02@yahoo.com", "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'justjoe02@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mUPDATE `users` SET `tmp_password_hash` = '$2a$10$kZ2mtFBiaEfSalzknVid/ecYnDC1Eqw8S5.yjO/i77hSL7am7Qbpi', `updated_at` = '2013-04-23 01:09:29' WHERE `users`.`id` = 21[0m
+  [1m[35m (187.9ms)[0m  COMMIT
+Completed 500 Internal Server Error in 366ms
+
+NameError (uninitialized constant UsersController::UserMail):
+  app/controllers/users_controller.rb:101:in `retrieve_pw'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.3ms)
+Connecting to database specified by database.yml
+
+
+Started POST "/retrieve_pw" for 127.0.0.1 at 2013-04-22 21:09:42 -0400
+Processing by UsersController#retrieve_pw as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "email"=>"justjoe02@yahoo.com", "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'justjoe02@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mUPDATE `users` SET `tmp_password_hash` = '$2a$10$kZ2mtFBiaEfSalzknVid/eWQNfPGWyeM52jtPT9N3ub.vlBhQNnTm', `updated_at` = '2013-04-23 01:09:44' WHERE `users`.`id` = 21[0m
+  [1m[35m (202.6ms)[0m  COMMIT
+Completed 500 Internal Server Error in 454ms
+
+NameError (uninitialized constant UsersController::UserMail):
+  app/controllers/users_controller.rb:101:in `retrieve_pw'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.8ms)
+
+
+Started POST "/retrieve_pw" for 127.0.0.1 at 2013-04-22 21:10:03 -0400
+Processing by UsersController#retrieve_pw as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "email"=>"justjoe02@yahoo.com", "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'justjoe02@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mUPDATE `users` SET `tmp_password_hash` = '$2a$10$kZ2mtFBiaEfSalzknVid/eYGwZJGe9JbhtwiXYdni/MWSgkybBnPu', `updated_at` = '2013-04-23 01:10:03' WHERE `users`.`id` = 21[0m
+  [1m[35m (139.7ms)[0m  COMMIT
+  Rendered user_mailer/password_reset.html.erb (0.6ms)
+
+Sent mail to justjoe02@yahoo.com (19ms)
+Date: Mon, 22 Apr 2013 21:10:05 -0400
+From: no-reply@wibu.com
+To: justjoe02@yahoo.com
+Message-ID: <5175df6d9a95e_2185216077c8625d@ubuntu.mail>
+Subject: Wibu Password Reset
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>You asked for a password reset from Wibu</h1>
+    <p>
+      You can log in with the temporary password: .<br/>
+    </p>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/log_in
+Completed 302 Found in 1838ms (ActiveRecord: 143.1ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 21:10:05 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 441ms (Views: 440.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /application.css - 304 Not Modified (90ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /documents.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /expertises.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /group.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /group_messages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /group_memberships.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /groups.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /institutions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /interests.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /project.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /projects.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /session.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /sessions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /task.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /users.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /tasks.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /user.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /bootstrap.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /expertises.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /group.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /documents.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /group_memberships.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /group_messages.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /interests.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /groups.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /institutions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /projects.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /project.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /session.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /task.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /tasks.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /user.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /users.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 21:10:06 -0400
+Served asset /application.js - 304 Not Modified (30ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 21:16:39 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 446ms (Views: 444.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /application.css - 304 Not Modified (87ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /documents.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /expertises.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /group_memberships.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /group.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /group_messages.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /groups.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /institutions.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /interests.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /project.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /projects.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /session.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /task.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /sessions.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /tasks.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /user.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /users.css - 304 Not Modified (76ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /expertises.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /documents.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /group.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /group_memberships.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /group_messages.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /institutions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /groups.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /interests.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /project.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /projects.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /session.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /tasks.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /task.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /user.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:40 -0400
+Served asset /application.js - 304 Not Modified (31ms)
+
+
+Started GET "/forgot_pw" for 127.0.0.1 at 2013-04-22 21:16:45 -0400
+Processing by UsersController#forgot_pw as HTML
+  Rendered users/forgot_pw.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 284ms (Views: 282.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /application.css - 304 Not Modified (57ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 21:16:46 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started POST "/retrieve_pw" for 127.0.0.1 at 2013-04-22 21:16:52 -0400
+Processing by UsersController#retrieve_pw as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "email"=>"justjoe02@yahoo.com", "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'justjoe02@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mUPDATE `users` SET `tmp_password_hash` = '$2a$10$kZ2mtFBiaEfSalzknVid/ezdtnizSHw3rDhNp9zdN2hxcPGuKo48C', `updated_at` = '2013-04-23 01:16:52' WHERE `users`.`id` = 21[0m
+  [1m[35m (192.0ms)[0m  COMMIT
+Completed 500 Internal Server Error in 1707ms
+
+NameError (undefined local variable or method `pw' for #<UserMailer:0x0000000340a288>):
+  app/mailers/user_mailer.rb:6:in `password_reset'
+  app/controllers/users_controller.rb:101:in `retrieve_pw'
+
+
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/joe/.rvm/gems/ruby-1.9.3-p194@wibu/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started POST "/retrieve_pw" for 127.0.0.1 at 2013-04-22 21:17:13 -0400
+Processing by UsersController#retrieve_pw as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "email"=>"justjoe02@yahoo.com", "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'justjoe02@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE `users` SET `tmp_password_hash` = '$2a$10$kZ2mtFBiaEfSalzknVid/eYMyMx.u/FLH6mcsx368GAIFWsuc5aHi', `updated_at` = '2013-04-23 01:17:13' WHERE `users`.`id` = 21[0m
+  [1m[35m (187.7ms)[0m  COMMIT
+  Rendered user_mailer/password_reset.html.erb (0.8ms)
+
+Sent mail to justjoe02@yahoo.com (4172ms)
+Date: Mon, 22 Apr 2013 21:17:14 -0400
+From: no-reply@wibu.com
+To: justjoe02@yahoo.com
+Message-ID: <5175e11a27d00_21e83f963412304021327@ubuntu.mail>
+Subject: Wibu Password Reset
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>You asked for a password reset from Wibu</h1>
+    <p>
+      You can log in with the temporary password: GqfkBTQxckaxYJx.<br/>
+    </p>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/log_in
+Completed 302 Found in 4570ms (ActiveRecord: 191.1ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 383ms (Views: 381.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:18 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 21:17:19 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE `users` SET `tmp_password_hash` = '', `updated_at` = '2013-04-23 01:27:30' WHERE `users`.`id` = 21
+  [1m[36m (168.5ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/forgot_pw" for 127.0.0.1 at 2013-04-22 21:27:32 -0400
+Processing by UsersController#forgot_pw as HTML
+  Rendered users/forgot_pw.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 349ms (Views: 348.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:33 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started POST "/retrieve_pw" for 127.0.0.1 at 2013-04-22 21:27:40 -0400
+Processing by UsersController#retrieve_pw as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "email"=>"justjoe02@yahoo.com", "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'justjoe02@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE `users` SET `tmp_password_hash` = '$2a$10$kZ2mtFBiaEfSalzknVid/euiAt.RZ9bri4s8S5GcvaPs2xK1d5mvi', `updated_at` = '2013-04-23 01:27:40' WHERE `users`.`id` = 21[0m
+  [1m[35m (127.1ms)[0m  COMMIT
+  Rendered user_mailer/password_reset.html.erb (0.1ms)
+
+Sent mail to justjoe02@yahoo.com (3905ms)
+Date: Mon, 22 Apr 2013 21:27:40 -0400
+From: no-reply@wibu.com
+To: justjoe02@yahoo.com
+Message-ID: <5175e38c80f85_21e83f963a092fbc21487@ubuntu.mail>
+Subject: Wibu Password Reset
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>You asked for a password reset from Wibu</h1>
+    <p>
+      You can log in with the temporary password: LGuwQyFpUgnVDvN.<br/>
+    </p>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/log_in
+Completed 302 Found in 4149ms (ActiveRecord: 128.2ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 21:27:44 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 348ms (Views: 347.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:44 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:44 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:44 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:44 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /expertises.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /project.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 21:27:45 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` LIMIT 1
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-22 22:15:03 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "user_name"=>"jo", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_name` = 'jo' LIMIT 1[0m
+Redirected to http://localhost:3000/log_in
+Completed 302 Found in 241ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 354ms (Views: 353.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /group.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /users.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /group.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:04 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:05 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:05 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:15:05 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-22 22:17:09 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "user_name"=>"jo", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_name` = 'jo' LIMIT 1
+Redirected to http://localhost:3000/log_in
+Completed 302 Found in 889653ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 22:31:58 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 350ms (Views: 349.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /project.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:31:59 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/forgot_pw" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Processing by UsersController#forgot_pw as HTML
+  Rendered users/forgot_pw.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 353ms (Views: 352.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:21 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:34:22 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` LIMIT 1
+
+
+Started POST "/retrieve_pw" for 127.0.0.1 at 2013-04-22 22:35:18 -0400
+Processing by UsersController#retrieve_pw as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "email"=>"justjoe02@yahoo.com", "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'justjoe02@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mUPDATE `users` SET `tmp_password_hash` = '$2a$10$kZ2mtFBiaEfSalzknVid/eNF6SwWJrHlD5BElp6yKugSH/hZO8YwC', `updated_at` = '2013-04-23 02:35:19' WHERE `users`.`id` = 21[0m
+  [1m[35m (169.8ms)[0m  COMMIT
+  Rendered user_mailer/password_reset.html.erb (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+
+Sent mail to justjoe02@yahoo.com (4366ms)
+Date: Mon, 22 Apr 2013 22:35:19 -0400
+From: no-reply@wibu.com
+To: justjoe02@yahoo.com
+Message-ID: <5175f3674a18a_21e83f963a11c730215c5@ubuntu.mail>
+Subject: Wibu Password Reset
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>You asked for a password reset from Wibu</h1>
+    <p>
+      You can log in with the temporary password: gUxsiPsTxHrujoJ.<br/>
+    </p>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/log_in
+Completed 302 Found in 4660ms (ActiveRecord: 171.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 22:35:23 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 412ms (Views: 411.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /group.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:35:24 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-22 22:35:47 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "user_name"=>"jo", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_name` = 'jo' LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 18481ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-22 22:36:05 -0400
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  [1m[35mInterest Load (0.1ms)[0m  SELECT `interests`.* FROM `interests` INNER JOIN `interests_users` ON `interests`.`id` = `interests_users`.`interest_id` WHERE `interests_users`.`user_id` = 21
+  [1m[36mInstitution Load (0.2ms)[0m  [1mSELECT `institutions`.* FROM `institutions` INNER JOIN `institutions_users` ON `institutions`.`id` = `institutions_users`.`institution_id` WHERE `institutions_users`.`user_id` = 21[0m
+  [1m[35mExpertise Load (0.2ms)[0m  SELECT `expertises`.* FROM `expertises` INNER JOIN `expertises_users` ON `expertises`.`id` = `expertises_users`.`expertise_id` WHERE `expertises_users`.`user_id` = 21
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1mSELECT `group_memberships`.* FROM `group_memberships` WHERE `group_memberships`.`user_id` = 21[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `documents` WHERE `documents`.`user_id` = 21
+  Rendered users/show.html.erb within layouts/application (267.1ms)
+Completed 200 OK in 617ms (Views: 600.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:36:06 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/log_in
+Filter chain halted as :log_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 373ms (Views: 372.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:14 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:15 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-22 22:43:19 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "user_name"=>"jo", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_name` = 'jo' LIMIT 1[0m
+Redirected to http://localhost:3000/log_in
+Completed 302 Found in 244ms (ActiveRecord: 30.4ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 22:43:19 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 355ms (Views: 354.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /project.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /task.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /user.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:20 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/forgot_pw" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Processing by UsersController#forgot_pw as HTML
+  Rendered users/forgot_pw.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 319ms (Views: 317.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /application.css - 304 Not Modified (66ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /task.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /project.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:31 -0400
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/retrieve_pw" for 127.0.0.1 at 2013-04-22 22:43:36 -0400
+Processing by UsersController#retrieve_pw as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "email"=>"justjoe02@yahoo.com", "commit"=>"Submit"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'justjoe02@yahoo.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  UPDATE `users` SET `tmp_password_hash` = '$2a$10$kZ2mtFBiaEfSalzknVid/eUczG6t37e5LQDK2yzT6HjjHlh1ws2q.', `updated_at` = '2013-04-23 02:43:36' WHERE `users`.`id` = 21
+  [1m[36m (318.7ms)[0m  [1mCOMMIT[0m
+  Rendered user_mailer/password_reset.html.erb (0.1ms)
+
+Sent mail to justjoe02@yahoo.com (5935ms)
+Date: Mon, 22 Apr 2013 22:43:36 -0400
+From: no-reply@wibu.com
+To: justjoe02@yahoo.com
+Message-ID: <5175f558e15f4_21e83f963a080e48216d0@ubuntu.mail>
+Subject: Wibu Password Reset
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>You asked for a password reset from Wibu</h1>
+    <p>
+      You can log in with the temporary password: iuPJmjuSzmrJpul.<br/>
+    </p>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/log_in
+Completed 302 Found in 6377ms (ActiveRecord: 320.8ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 22:43:42 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 394ms (Views: 393.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /task.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:43:43 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-22 22:44:36 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "user_name"=>"jo", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_name` = 'jo' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 190ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-22 22:44:36 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1
+  [1m[36mInterest Load (0.2ms)[0m  [1mSELECT `interests`.* FROM `interests` INNER JOIN `interests_users` ON `interests`.`id` = `interests_users`.`interest_id` WHERE `interests_users`.`user_id` = 21[0m
+  [1m[35mInstitution Load (0.2ms)[0m  SELECT `institutions`.* FROM `institutions` INNER JOIN `institutions_users` ON `institutions`.`id` = `institutions_users`.`institution_id` WHERE `institutions_users`.`user_id` = 21
+  [1m[36mExpertise Load (0.2ms)[0m  [1mSELECT `expertises`.* FROM `expertises` INNER JOIN `expertises_users` ON `expertises`.`id` = `expertises_users`.`expertise_id` WHERE `expertises_users`.`user_id` = 21[0m
+  [1m[35mGroupMembership Load (0.2ms)[0m  SELECT `group_memberships`.* FROM `group_memberships` WHERE `group_memberships`.`user_id` = 21
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `documents` WHERE `documents`.`user_id` = 21[0m
+  Rendered users/show.html.erb within layouts/application (73.6ms)
+Completed 200 OK in 432ms (Views: 415.7ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:36 -0400
+Served asset /application.css - 304 Not Modified (76ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /user.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /group.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /task.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:37 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2013-04-22 22:44:41 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-22 22:44:41 -0400
+Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/log_in
+Filter chain halted as :log_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 22:44:41 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 372ms (Views: 372.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:41 -0400
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /group.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:42 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-22 22:44:46 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "user_name"=>"jo", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_name` = 'jo' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 189ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-22 22:44:46 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1
+  [1m[36mInterest Load (0.1ms)[0m  [1mSELECT `interests`.* FROM `interests` INNER JOIN `interests_users` ON `interests`.`id` = `interests_users`.`interest_id` WHERE `interests_users`.`user_id` = 21[0m
+  [1m[35mInstitution Load (0.2ms)[0m  SELECT `institutions`.* FROM `institutions` INNER JOIN `institutions_users` ON `institutions`.`id` = `institutions_users`.`institution_id` WHERE `institutions_users`.`user_id` = 21
+  [1m[36mExpertise Load (0.1ms)[0m  [1mSELECT `expertises`.* FROM `expertises` INNER JOIN `expertises_users` ON `expertises`.`id` = `expertises_users`.`expertise_id` WHERE `expertises_users`.`user_id` = 21[0m
+  [1m[35mGroupMembership Load (0.2ms)[0m  SELECT `group_memberships`.* FROM `group_memberships` WHERE `group_memberships`.`user_id` = 21
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `documents` WHERE `documents`.`user_id` = 21[0m
+  Rendered users/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 362ms (Views: 358.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /task.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:44:47 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2013-04-22 22:45:07 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-22 22:45:07 -0400
+Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/log_in
+Filter chain halted as :log_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 22:45:07 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 377ms (Views: 376.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /project.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /project.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:08 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-22 22:45:12 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "user_name"=>"jo", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`user_name` = 'jo' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE `users` SET `tmp_password_hash` = '', `updated_at` = '2013-04-23 02:45:12' WHERE `users`.`id` = 21
+  [1m[36m (109.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 340ms (ActiveRecord: 112.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-22 22:45:12 -0400
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  [1m[35mInterest Load (0.1ms)[0m  SELECT `interests`.* FROM `interests` INNER JOIN `interests_users` ON `interests`.`id` = `interests_users`.`interest_id` WHERE `interests_users`.`user_id` = 21
+  [1m[36mInstitution Load (0.1ms)[0m  [1mSELECT `institutions`.* FROM `institutions` INNER JOIN `institutions_users` ON `institutions`.`id` = `institutions_users`.`institution_id` WHERE `institutions_users`.`user_id` = 21[0m
+  [1m[35mExpertise Load (0.2ms)[0m  SELECT `expertises`.* FROM `expertises` INNER JOIN `expertises_users` ON `expertises`.`id` = `expertises_users`.`expertise_id` WHERE `expertises_users`.`user_id` = 21
+  [1m[36mGroupMembership Load (0.1ms)[0m  [1mSELECT `group_memberships`.* FROM `group_memberships` WHERE `group_memberships`.`user_id` = 21[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `documents` WHERE `documents`.`user_id` = 21
+  Rendered users/show.html.erb within layouts/application (63.3ms)
+Completed 200 OK in 426ms (Views: 410.0ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:13 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2013-04-22 22:45:15 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-22 22:45:15 -0400
+Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/log_in
+Filter chain halted as :log_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 22:45:15 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 386ms (Views: 385.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /task.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:16 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANqjPQG+GXAToOrpQUGFgWC+feUmeT/Gm8zFHJlCl+Y=", "user_name"=>"jo", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`user_name` = 'jo' LIMIT 1[0m
+Redirected to http://localhost:3000/log_in
+Completed 302 Found in 190ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 360ms (Views: 359.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /documents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /expertises.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /group.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /group_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /group_memberships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /institutions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /groups.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /project.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /projects.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /task.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /session.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /user.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/documents.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:21 -0400
+Served asset /documents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/expertises.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /expertises.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /group.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_memberships.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /group_memberships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/group_messages.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /group_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/groups.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /groups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/institutions.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /institutions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/project.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /project.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /task.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /user.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-22 22:45:22 -0400
+Served asset /application.js - 304 Not Modified (1ms)

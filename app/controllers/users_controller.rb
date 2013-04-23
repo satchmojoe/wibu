@@ -98,6 +98,7 @@ class UsersController < ApplicationController
     if user
       user.tmp_password_hash = BCrypt::Engine.hash_secret(tmp_pw, user.password_salt)
       if user.save
+        UserMailer.password_reset(user, tmp_pw).deliver
         redirect_to log_in_path, :notice => "Email sent to #{params[:email]}"
       else
         redirect_to log_in_path, :notice => "Error resetting password."
