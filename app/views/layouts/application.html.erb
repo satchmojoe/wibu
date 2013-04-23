@@ -17,25 +17,31 @@
         <a class="brand" href="/">WIBU</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li class="active"><a href="#"><%=current_user.user_name.capitalize%>'s Profile Page</a></li>
-            <li><a href="/groups/new">Create Group</a></li>
-            <li><a href="#">Upload</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Things <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Change Password</a></li>
-                <li><a href="/users/<%=current_user.id%>/edit">Edit Profile</a></li>
-                <li class="divider"></li>
-                <li class="nav-header">Nav header</li>
-                <li><a href="#">Study Group 1</a></li>
-                <li><a href="#">Study Group 2</a></li>
-              </ul>
-            </li>
+            <% if current_user %>
+              <li class="active"><a href="/users/<%=current_user.id%>"><%=current_user.user_name.capitalize%>'s Profile Page</a></li>
+              <li><a href="/groups/new">Create Group</a></li>
+              <li><a href="#">Upload</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Things <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Change Password</a></li>
+                  <li><a href="/users/<%=current_user.id%>/edit">Edit Profile</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Study Group 1</a></li>
+                  <li><a href="#">Study Group 2</a></li>
+                </ul>
+              </li>
+            <% else %>
+              <li><a href="/users/new">Register Now!</a></li>
+            <% end %>
           </ul>
-          <form class="navbar-form pull-right">
-            <input class="span2" type="search" placeholder="Search Term">
-            <button type="submit" class="btn">Search</button>
-          </form>
+          <% if current_user %>
+            <form class="navbar-form pull-right">
+              <input class="span2" type="search" placeholder="Search Term">
+              <button type="submit" class="btn">Search</button>
+            </form>
+          <% end %>
           <ul class="nav" id="user_nav"  style="float:right">
             <% if current_user %>
               <li><%= link_to "Log out #{current_user.user_name}", log_out_path %></li>
@@ -53,6 +59,7 @@
     <div class="container" style="width:95%" >
       <div class="hero-unit" style="height:100%;float:left;width:90%">
 
+        <p id="notice"><%= notice %></p>
         <%= yield %>
       </div>
     </div>

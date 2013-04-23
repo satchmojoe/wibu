@@ -1,0 +1,11 @@
+<h4>Please enter the email used at registration to receive a temporary password</h4>
+<%= form_tag retrieve_pw_path do  %>
+  <div class="field">
+    <%= label_tag :email %>
+    <%= text_field_tag :email %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Submit" %>
+  </div>
+<% end %>

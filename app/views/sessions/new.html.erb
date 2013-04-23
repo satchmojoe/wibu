@@ -1,5 +1,10 @@
 <h1>Log in</h1>
 
+<style type="text/css">
+ .button {float:left;margin-top:5px}
+ a {font-size:.9em;}
+</style>
+
 <%= form_tag sessions_path do %>
   <p>
     <%= label_tag :user_name %><br />
@@ -9,5 +14,6 @@
     <%= label_tag :password %><br />
     <%= password_field_tag :password %>
   </p>
-  <p class="button"><%= submit_tag "Log in" %></p>
+  <p class="button" style="margin-right:10px"><%= submit_tag "Log in" %></p>
+  <%= link_to "Forgot Password?", forgot_pw_path %>
 <% end %>

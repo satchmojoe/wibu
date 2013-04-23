@@ -9,21 +9,19 @@ class SessionsController < ApplicationController
 
   def create
     user = User.authenticate(params[:user_name], params[:password])
-    if user
-      session[:user_id] = user.id
-      redirect_to welcome_path, :notice=> "Logged in!"
-    else
-      flash.now.alert = "Invalid user name or password"
-      render "new"
+    respond_to do |format|
+      if user
+        session[:user_id] = user.id
+        format.html {redirect_to root_path, notice: "Logged in!"}
+      else
+        format.html {redirect_to log_in_path, notice: "Invalid user name or password"}
+      end
     end
   end
 
   def destroy
     session[:user_id] = nil
     redirect_to root_url, :notice => "Logged out"
-  end
-
-  def welcome
   end
 
   def change_password

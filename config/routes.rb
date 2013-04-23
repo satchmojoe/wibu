@@ -35,6 +35,8 @@ Wibu::Application.routes.draw do
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "change_password" => "sessions#change_password", :as => "change_password"
   put "/sessions/update_password"
+  get "forgot_pw" => "users#forgot_pw", :as => "forgot_pw"
+  post "retrieve_pw" => "users#retrieve_pw", :as => "retrieve_pw"
 
   resources :sessions
   root :to => "users#show"

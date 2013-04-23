@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_filter :log_in, :only => [:new, :create]
+  skip_before_filter :log_in, :only => [:new, :create, :forgot_pw, :retrieve_pw]
 
   # GET /users
   # GET /users.json
@@ -46,8 +46,14 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render json: @user, status: :created, location: @user }
+        user = User.authenticate(@user.user_name, params[:user]["password"])
+        if user
+          session[:user_id] = user.id
+          format.html { redirect_to @user, notice: 'User was successfully created.' }
+          format.json { render json: @user, status: :created, location: @user }
+        else
+          format.html { render action: "new" }
+        end
       else
         format.html { render action: "new" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -79,6 +85,25 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to users_url }
       format.json { head :no_content }
+    end
+  end
+
+  def forgot_pw
+  end
+
+  def retrieve_pw
+    o =  [('a'..'z'),('A'..'Z')].map{|i| i.to_a}.flatten
+    tmp_pw  =  (0...15).map{ o[rand(o.length)] }.join
+    user = User.find_by_email params[:email]
+    if user
+      user.tmp_password_hash = BCrypt::Engine.hash_secret(tmp_pw, user.password_salt)
+      if user.save
+        redirect_to log_in_path, :notice => "Email sent to #{params[:email]}"
+      else
+        redirect_to log_in_path, :notice => "Error resetting password."
+      end
+    else
+      redirect_to log_in_path, :notice => "Error resetting password."
     end
   end
 end
