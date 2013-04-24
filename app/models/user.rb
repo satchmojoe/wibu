@@ -37,8 +37,6 @@ class User < ActiveRecord::Base
   def self.authenticate(user_name, password)
     user = find_by_user_name(user_name)
     if user && (user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt) || user.tmp_password_hash == BCrypt::Engine.hash_secret(password, user.password_salt) )
-      user.tmp_password_hash = ""
-      user.save
       user
     else
       nil

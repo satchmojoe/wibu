@@ -31,6 +31,7 @@ class SessionsController < ApplicationController
     u = User.authenticate User.find(params["id"]).user_name, params["curr"]
     if u && params["new"] == params["conf_new"]
       u.password = params["new"]
+      u.tmp_password_hash = "" 
       u.save
       redirect_to root_url, :notice => "Password updated"
     else 
