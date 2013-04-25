@@ -55,14 +55,17 @@
     <ul>
       <% unless @user.documents.empty?%>
         <% @user.documents.each do |int| %>
-          <li><%= int.text %></liv>
+          <li><%= link_to int.file_name, "/documents/#{int.id}" %></liv>
         <% end %>
       <% end %>
     </ul>
   </div>
+  <hr style="border-color:black">
   <div>
     Upload File</br>
-    <input type="file"></input>
-
+    <%= form_for @user do |f|%>
+      <%= f.file_field :document %></br>
+      <%= f.submit 'Upload'%>
+    <% end %>
   </div>
 </div>

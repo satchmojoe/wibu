@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130422000248) do
+ActiveRecord::Schema.define(:version => 20130424231252) do
 
   create_table "documents", :force => true do |t|
     t.string   "file_name"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(:version => 20130422000248) do
     t.integer  "group_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "document"
+    t.string   "url"
   end
 
   create_table "expertises", :force => true do |t|

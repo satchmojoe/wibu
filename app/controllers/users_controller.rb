@@ -65,6 +65,13 @@ class UsersController < ApplicationController
   # PUT /users/1.json
   def update
     @user = User.find(User.parse_params_for_habtms(params)[:id])
+
+    #Uploaded documents are not attributes of user and aren't updated as such
+    if params[:user][:document]
+      Document.upload_doc(params[:user][:document],current_user)
+      params[:user].delete :document
+    end
+
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to @user, notice: 'User was successfully updated.' }

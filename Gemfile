@@ -1,12 +1,13 @@
-source 'https://rubygems.org'
+#source 'https://rubygems.org'
 source 'http://gems.rubyforge.org'
 
 gem 'rails', '3.2.13'
-gem 'activerecord'
-gem 'activerecord-mysql-adapter'
-gem 'mysql2'
+gem 'activerecord', '3.2.13'
+gem 'activerecord-mysql-adapter', '0.0.1'
+gem 'mysql2', '0.3.11'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'simplecov', :require => false, :group => :test
+gem 'carrierwave'
 
 
 # Gems used only for assets and not required

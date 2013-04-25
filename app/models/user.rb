@@ -18,10 +18,9 @@ class User < ActiveRecord::Base
   end
 
   def self.parse_params_for_habtms params
-    binding.pry
-    params[:user]["interests"] = params[:user]["interests"].map{ |i| (i.empty? ? nil : Interest.find(i.to_i))}.delete_if{|x| x == nil}
-    params[:user]["institutions"] = params[:user]["institutions"].map{ |i| (i.empty? ? nil : Institution.find(i.to_i))}.delete_if{|x| x == nil}
-    params[:user]["expertises"] = params[:user]["expertises"].map{ |i| (i.empty? ? nil : Expertise.find(i.to_i))}.delete_if{|x| x == nil}
+    params[:user]["interests"] = params[:user]["interests"].map{ |i| (i.empty? ? nil : Interest.find(i.to_i))}.delete_if{|x| x == nil} if params[:user]["interests"]
+    params[:user]["institutions"] = params[:user]["institutions"].map{ |i| (i.empty? ? nil : Institution.find(i.to_i))}.delete_if{|x| x == nil} if params[:user]["institutions"]
+    params[:user]["expertises"] = params[:user]["expertises"].map{ |i| (i.empty? ? nil : Expertise.find(i.to_i))}.delete_if{|x| x == nil} if params[:user]["expertises"]
     params
   end
 
@@ -42,4 +41,5 @@ class User < ActiveRecord::Base
       nil
     end
   end
+
 end
