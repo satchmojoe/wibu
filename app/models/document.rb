@@ -16,6 +16,16 @@ class Document < ActiveRecord::Base
     new_document.url = new_document.document.url
     #Url is not made permanent until saved
     new_document.save!
-    binding.pry
+  end
+
+  def download_permitted? user
+    if (self.user_id != nil || !self.user_id.to_s.empty?) && 
+        (self.group_id == nil || self.group_id.to_s.empty)
+      return true
+    elsif self.group_id && (Group.find(self.group_id).members.include? user)
+      return true
+    else
+      return false
+    end
   end
 end

@@ -14,7 +14,12 @@ class DocumentsController < ApplicationController
   # GET /documents/1.json
   def show
     @document = Document.find(params[:id])
-    send_file @document.url
+    if @document.download_permitted? current_user
+      send_file @document.url
+    else
+      tmp = request.env["HTTP_REFERER"].split "/"
+      redirect_to "/"+tmp[tmp.length-2].concat('/'+tmp[tmp.length-1]), notice: "File not available for you to download"
+    end
 =begin
     respond_to do |format|
       format.html # show.html.erb

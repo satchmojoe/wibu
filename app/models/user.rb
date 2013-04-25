@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :documents
   has_many :group_memberships
   has_many :tasks
+  has_many :groups, :through => :group_memberships
 
   before_save :encrypt_password
   validates_confirmation_of :password

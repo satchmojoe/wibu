@@ -45,7 +45,7 @@
     <ul>
       <% unless @user.groups.empty?%>
         <% @user.groups.each do |int| %>
-          <li><%= int.text %></liv>
+          <li><%= link_to int.name, "/groups/#{int.id}" %></liv>
         <% end %>
       <% end %>
     </ul>
@@ -53,7 +53,7 @@
   <div style="margin:5px">
     <u><%= @user.user_name.capitalize%>'s Files</u>
     <ul>
-      <% unless @user.documents.empty?%>
+      <% unless @user.documents.empty? %>
         <% @user.documents.each do |int| %>
           <li><%= link_to int.file_name, "/documents/#{int.id}" %></liv>
         <% end %>
