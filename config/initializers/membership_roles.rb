@@ -6,4 +6,8 @@ module MembershipRoles
   def self.member
     "member"
   end
+
+  def self.pending
+    "pending"
+  end
 end

@@ -20,6 +20,7 @@
             <% if current_user %>
               <li class="active"><a href="/users/<%=current_user.id%>"><%=current_user.user_name.capitalize%>'s Profile Page</a></li>
               <li><a href="/groups/new">Create Group</a></li>
+              <li><a href="/groups">Groups List</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Things <b class="caret"></b></a>
                 <ul class="dropdown-menu">
