@@ -3,6 +3,7 @@ class CreateGroupMemberships < ActiveRecord::Migration
     create_table :group_memberships do |t|
       t.integer :user_id
       t.integer :group_id
+      t.string :role
 
       t.timestamps
     end

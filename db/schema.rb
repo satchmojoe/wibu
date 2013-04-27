@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20130424231252) do
   create_table "group_memberships", :force => true do |t|
     t.integer  "user_id"
     t.integer  "group_id"
+    t.string   "role"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
