@@ -11,4 +11,11 @@ class Group < ActiveRecord::Base
     self.users
   end
 
+  def is_member? user
+    self.members.include? user
+  end
+
+  def is_admin? user
+    GroupMembership.where(:role => MembershipRoles.admin).where(:group_id => self.id).first.user_id == user.id
+  end
 end

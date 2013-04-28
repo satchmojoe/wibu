@@ -7,7 +7,12 @@
 <% @results.each do |result|%>
   <div style="margin:0px 0px 20px 0px">
     <a href= "/<%=result[:type].downcase%>s/<%=result[:id]%>" ><strong><%= result[:type]%>: </strong> <%= result[:name].gsub(params[:search], "<mark>#{params[:search]}</mark>").html_safe %></a>
-    <p><%= result[:text_area]%>: <%= result[:text].gsub(Regexp.new(params[:search],"i")){|r| "<mark>#{r}</mark>"}.html_safe%></p>
+
+    <% if result[:type] == "User" %>
+      <p>Bio: <%= User.find(result[:id]).bio.gsub(Regexp.new(params[:search],"i")){|r| "<mark>#{r}</mark>"}.html_safe%></p>
+    <% elsif result[:type] == "Group" %>
+      <p style="width:500px">Description<%= Group.find(result[:id]).description.gsub(Regexp.new(params[:search],"i")){|r| "<mark>#{r}</mark>"}.html_safe%></p>
+    <% end %>
   </div>
 <% end %>
 

@@ -1,13 +1,53 @@
-<p>
-  <b>Name:</b>
-  <%= @group.name %>
-</p>
+<h1><%= @group.name.capitalize%></h1>
+<div style="text-align:center;border:1px solid black;">
+  <%= GroupHelper.member_ship_status @group,current_user %>
+</div>
+<div style="border:1px solid black;float:left;margin:5px;width:70%">
+  <div style="float:left;margin:5px">
+    <h3>About <%= @group.name.capitalize%></h3>
+    <p>
+      <%= @group.description %>
+    </p>
+    <hr style="border-color:black">
+    
+  </div>
+</div>
 
-<p>
-  <b>Description:</b>
-  <%= @group.description %>
-</p>
-
-
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+<div id="sidebar" style="border:1px solid black;text-align:centerwidth:30%;float:right;margin:5px">
+  <div style="margin:5px">
+    <u><%= @group.name.capitalize%>'s Members</u>
+    <ul>
+      <% unless @group.members.empty?%>
+        <% @group.members.each do |int| %>
+          <li><%= link_to int.user_name, "/groups/#{int.id}" %></liv>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div style="margin:5px">
+    <u><%= @group.name.capitalize%>'s Files</u>
+    <ul>
+      <% unless @group.documents.empty? %>
+        <% if @group.is_member? current_user %>
+          <% @group.documents.each do |int| %>
+            <li><%= link_to int.file_name, "/documents/#{int.id}" %></liv>
+          <% end %>
+        <% else %>
+          <% @group.documents.each do |int| %>
+            <li><%= int.file_name %></liv>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <% if @group.is_member? current_user %>
+    <hr style="border-color:black">
+    <div>
+      Upload File</br>
+      <%= form_for @group do |f|%>
+        <%= f.file_field :document %></br>
+        <%= f.submit 'Upload'%>
+      <% end %>
+    </div>
+  <% end %>
+</div>

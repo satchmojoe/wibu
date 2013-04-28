@@ -59,6 +59,12 @@ class GroupsController < ApplicationController
   def update
     @group = Group.find(params[:id])
 
+    #Uploaded documents are not attributes of user and aren't updated as such
+    if params[:group][:document]
+      Document.upload_doc(params[:group][:document], @group)
+      params[:group].delete :document
+    end
+
     respond_to do |format|
       if @group.update_attributes(params[:group])
         format.html { redirect_to @group, notice: 'Group was successfully updated.' }

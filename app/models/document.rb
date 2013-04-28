@@ -11,7 +11,7 @@ class Document < ActiveRecord::Base
     new_document = Document.new :document => doc, :file_name => doc.original_filename
     new_document.document = File.open("public/data/#{doc.original_filename}", File::CREAT)
 
-    owner.is_a?(Group) ? new_document.group_id=onwer.id : new_document.user_id=owner.id
+    owner.is_a?(Group) ? new_document.group_id=owner.id : new_document.user_id=owner.id
     new_document.save!
     new_document.url = new_document.document.url
     #Url is not made permanent until saved
