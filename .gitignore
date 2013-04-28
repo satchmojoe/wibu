@@ -1,3 +1,5 @@
 *.swp
-/tmp/cache/*
+/tmp/*
 log/*
+*/server.pid
+

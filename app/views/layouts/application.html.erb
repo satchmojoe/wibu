@@ -37,10 +37,12 @@
             <% end %>
           </ul>
           <% if current_user %>
-            <form class="navbar-form pull-right">
-              <input class="span2" type="search" placeholder="Search Term">
-              <button type="submit" class="btn">Search</button>
-            </form>
+            
+
+            <%= form_tag "/search/results", :class=>"navbar-form pull-right",:method => 'get' do %>
+                <%= text_field_tag :search, params[:search], {:placeholder => "Search Terms", :class => "span2"} %>
+                <%= submit_tag "Search", {:name => nil ,:style=>"height:30px"}%>
+            <% end %>
           <% end %>
           <ul class="nav" id="user_nav"  style="float:right">
             <% if current_user %>

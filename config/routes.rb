@@ -1,4 +1,6 @@
 Wibu::Application.routes.draw do
+  get "search/results"
+
   resources :group_memberships
 
 
