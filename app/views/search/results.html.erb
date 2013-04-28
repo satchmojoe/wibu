@@ -1,0 +1,13 @@
+<h2>Search Results for: <%= params[:search] %></h2>
+<h4><%= @results.length%> results:</h4>
+  <style type="text/css">
+    p {margin:0px;line-height:20px;font-size:.7em}
+    a {font-size:.9em}
+  </style>
+<% @results.each do |result|%>
+  <div style="margin:0px 0px 20px 0px">
+    <a href= "/<%=result[:type].downcase%>s/<%=result[:id]%>" ><strong><%= result[:type]%>: </strong> <%= result[:name].gsub(params[:search], "<mark>#{params[:search]}</mark>").html_safe %></a>
+    <p><%= result[:text_area]%>: <%= result[:text].gsub(Regexp.new(params[:search],"i")){|r| "<mark>#{r}</mark>"}.html_safe%></p>
+  </div>
+<% end %>
+
