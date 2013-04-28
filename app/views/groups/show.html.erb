@@ -1,6 +1,12 @@
 <h1><%= @group.name.capitalize%></h1>
 <div style="text-align:center;border:1px solid black;">
-  <%= GroupHelper.member_ship_status @group,current_user %>
+  <% if @group.is_member? current_user %>
+    You are a member of this group
+  <% elsif @group.pending_member? current_user %>
+    Membership is waiting review by group admin
+  <% else %>
+    <%=button_to "Request to join #{@group.name.capitalize}", "/group_memberships?user_id=#{current_user.id}&group_id=#{@group.id}", :method => :post %>
+  <%end %>
 </div>
 <div style="border:1px solid black;float:left;margin:5px;width:70%">
   <div style="float:left;margin:5px">
@@ -18,8 +24,8 @@
     <u><%= @group.name.capitalize%>'s Members</u>
     <ul>
       <% unless @group.members.empty?%>
-        <% @group.members.each do |int| %>
-          <li><%= link_to int.user_name, "/groups/#{int.id}" %></liv>
+        <% @group.members.uniq.each do |int| %>
+          <li><%= link_to int.user_name, "/users/#{int.id}" %></liv>
         <% end %>
       <% end %>
     </ul>
@@ -48,6 +54,24 @@
         <%= f.file_field :document %></br>
         <%= f.submit 'Upload'%>
       <% end %>
+    </div>
+  <% end %>
+  <% if @group.is_admin?(current_user) && (@group.pending_memberships.count > 0) %>
+    <hr style="border-color:black">
+    <div>
+      Pending Memberships
+      <ul>
+        <style type="text/css">
+          .button_to {float:left;margin:0px}
+        </style>
+        <% @group.pending_memberships.each do |pm| %>
+          <li><div style="float:left"><%= pm.user.user_name %>:</div> 
+                                      <%= button_to "Accept","/group_memberships/#{pm.id}?role=#{MembershipRoles.member}", :method=>:put %> 
+                                      <%=button_to "Reject", "/group_memberships/#{pm.id}", :method => :delete %>
+          </li>
+          <hr style="border-color:black;margin:0 0 5px">
+        <% end %>
+      </ul>
     </div>
   <% end %>
 </div>

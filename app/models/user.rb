@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
-  validates_presence_of :bio
+  before_save :handle_bio
 
   def groups
     self.group_memberships.map{ |m| Group.find(m.group_id) }
@@ -42,6 +42,10 @@ class User < ActiveRecord::Base
     else
       nil
     end
+  end
+
+  def handle_bio
+    self.bio ||= ""
   end
 
 end

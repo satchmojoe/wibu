@@ -8,7 +8,7 @@ class Group < ActiveRecord::Base
   has_many :users, :through => :group_memberships
 
   def members
-    self.users
+    GroupMembership.where(:group_id => self.id).find(:all, :conditions => ["role = ? OR role = ?", MembershipRoles.admin, MembershipRoles.member]).map{|gm| User.find gm.user_id}
   end
 
   def is_member? user
@@ -16,6 +16,14 @@ class Group < ActiveRecord::Base
   end
 
   def is_admin? user
-    GroupMembership.where(:role => MembershipRoles.admin).where(:group_id => self.id).first.user_id == user.id
+    GroupMembership.where(:role => MembershipRoles.admin).where(:group_id => self.id).where(:user_id => user.id).count >0
+  end
+
+  def pending_member? user
+    GroupMembership.where(:role => MembershipRoles.pending).where(:group_id => self.id).where(:user_id => user.id).count >0
+  end
+
+  def pending_memberships
+    GroupMembership.where(:role => MembershipRoles.pending).where(:group_id => self.id).all
   end
 end

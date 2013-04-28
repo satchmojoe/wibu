@@ -20,12 +20,6 @@ class DocumentsController < ApplicationController
       tmp = request.env["HTTP_REFERER"].split "/"
       redirect_to "/"+tmp[tmp.length-2].concat('/'+tmp[tmp.length-1]), notice: "File not available for you to download"
     end
-=begin
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @document }
-    end
-=end
   end
 
   # GET /documents/new
