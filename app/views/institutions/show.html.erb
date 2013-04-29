@@ -1,0 +1,13 @@
+<p>
+  <b>Text:</b>
+  <%= @institution.text %>
+</p>
+
+<p>
+  <b>User ids:</b>
+  <%= @institution.user_ids %>
+</p>
+
+
+<%= link_to 'Edit', edit_institution_path(@institution) %> |
+<%= link_to 'Back', institutions_path %>

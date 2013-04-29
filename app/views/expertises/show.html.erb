@@ -1,0 +1,13 @@
+<p>
+  <b>Text:</b>
+  <%= @expertise.text %>
+</p>
+
+<p>
+  <b>User ids:</b>
+  <%= @expertise.user_ids %>
+</p>
+
+
+<%= link_to 'Edit', edit_expertise_path(@expertise) %> |
+<%= link_to 'Back', expertises_path %>

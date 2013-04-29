@@ -1,0 +1,71 @@
+<h1><%= @user.user_name.capitalize%>'s Profile</h1>
+<div style="border:1px solid black;float:left;margin:5px;width:70%">
+  <h3><%= @user.user_name.capitalize%>'s Bio</h3>
+  <div style="float:left;margin:5px">
+    <h4><u>About <%= @user.user_name.capitalize%></u></h4>
+    <p>
+      <%= @user.bio %>
+    </p>
+    <hr style="border-color:black">
+    
+    <h4><u><%= @user.user_name.capitalize%>'s Interests</u></h4>
+    <ul>
+      <% unless @user.interests.empty?%>
+        <% @user.interests.each do |int| %>
+          <li><%= int.text %></liv>
+        <% end %>
+      <% end %>
+    </ul>
+    <hr style="border-color:black">
+    
+    <h4><u><%= @user.user_name.capitalize%>'s Areas of Expertise</u></h4>
+    <ul>
+      <% unless @user.institutions.empty?%>
+        <% @user.institutions.each do |int| %>
+          <li><%= int.text %></liv>
+        <% end %>
+      <% end %>
+    </ul>
+    <hr style="border-color:black">
+    
+    <h4><u><%= @user.user_name.capitalize%>'s Institutions</u></h4>
+    <ul>
+      <% unless @user.expertises.empty?%>
+        <% @user.expertises.each do |int| %>
+          <li><%= int.text %></liv>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div id="sidebar" style="border:1px solid black;text-align:centerwidth:30%;float:right">
+  <div style="margin:5px">
+    <u><%= @user.user_name.capitalize%>'s Groups</u>
+    <ul>
+      <% unless @user.groups.empty?%>
+        <% @user.groups.each do |int| %>
+          <li><%= link_to int.name, "/groups/#{int.id}" %></liv>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div style="margin:5px">
+    <u><%= @user.user_name.capitalize%>'s Files</u>
+    <ul>
+      <% unless @user.documents.empty? %>
+        <% @user.documents.each do |int| %>
+          <li><%= link_to int.file_name, "/documents/#{int.id}" %></liv>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <hr style="border-color:black">
+  <div>
+    Upload File</br>
+    <%= form_for @user do |f|%>
+      <%= f.file_field :document %></br>
+      <%= f.submit 'Upload'%>
+    <% end %>
+  </div>
+</div>

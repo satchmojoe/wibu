@@ -1,0 +1,13 @@
+<p>
+  <b>Message:</b>
+  <%= @group_message.message %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%= @group_message.group_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_group_message_path(@group_message) %> |
+<%= link_to 'Back', group_messages_path %>

@@ -1,0 +1,18 @@
+<h2>Search Results for: <%= params[:search] %></h2>
+<h4><%= @results.length%> results:</h4>
+  <style type="text/css">
+    p {margin:0px;line-height:20px;font-size:.7em}
+    a {font-size:.9em}
+  </style>
+<% @results.each do |result|%>
+  <div style="margin:0px 0px 20px 0px">
+    <a href= "/<%=result[:type].downcase%>s/<%=result[:id]%>" ><strong><%= result[:type]%>: </strong> <%= result[:name].gsub(params[:search], "<mark>#{params[:search]}</mark>").html_safe %></a>
+
+    <% if result[:type] == "User" %>
+      <p>Bio: <%= User.find(result[:id]).bio.gsub(Regexp.new(params[:search],"i")){|r| "<mark>#{r}</mark>"}.html_safe%></p>
+    <% elsif result[:type] == "Group" %>
+      <p style="width:500px">Description<%= Group.find(result[:id]).description.gsub(Regexp.new(params[:search],"i")){|r| "<mark>#{r}</mark>"}.html_safe%></p>
+    <% end %>
+  </div>
+<% end %>
+

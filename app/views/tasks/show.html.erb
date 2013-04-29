@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%= @task.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @task.description %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @task.project_id %>
+</p>
+
+<p>
+  <b>Deadline:</b>
+  <%= @task.deadline %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @task.status %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @task.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

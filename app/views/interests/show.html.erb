@@ -1,0 +1,13 @@
+<p>
+  <b>Text:</b>
+  <%= @interest.text %>
+</p>
+
+<p>
+  <b>User ids:</b>
+  <%= @interest.user_ids %>
+</p>
+
+
+<%= link_to 'Edit', edit_interest_path(@interest) %> |
+<%= link_to 'Back', interests_path %>

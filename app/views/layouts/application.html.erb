@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="/">WIBU</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <% if current_user %>
+              <li class="active"><a href="/users/<%=current_user.id%>"><%=current_user.user_name.capitalize%>'s Profile Page</a></li>
+              <li><a href="/groups/new">Create Group</a></li>
+              <li><a href="/groups">Groups List</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Things <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href=<%= change_password_path%>>Change Password</a></li>
+                  <li><a href="/users/<%=current_user.id%>/edit">Edit Profile</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Study Group 1</a></li>
+                  <li><a href="#">Study Group 2</a></li>
+                </ul>
+              </li>
+            <% else %>
+              <li><a href="/users/new">Register Now!</a></li>
+            <% end %>
+          </ul>
+          <% if current_user %>
+            
+
+            <%= form_tag "/search/results", :class=>"navbar-form pull-right",:method => 'get' do %>
+                <%= text_field_tag :search, params[:search], {:placeholder => "Search Terms", :class => "span2"} %>
+                <%= submit_tag "Search", {:name => nil ,:style=>"height:30px"}%>
+            <% end %>
+          <% end %>
+          <ul class="nav" id="user_nav"  style="float:right">
+            <% if current_user %>
+              <li><%= link_to "Log out #{current_user.user_name}", log_out_path %></li>
+            <% else %>
+              <% if !(params[:controller] == "sessions" && params[:action] == "new") %>
+                <li><%= link_to "Log in", log_in_path %></li>
+              <% end %>
+            <% end %>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+  <div id="content" style="margin-top:50px">
+    <div class="container" style="width:95%" >
+      <div class="hero-unit" style="height:100%;float:left;width:90%">
+
+        <p id="notice"><%= notice %></p>
+        <%= yield %>
+      </div>
+    </div>
+  
+    
+  </div>
+</body>
+</html>
