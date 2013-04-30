@@ -1,13 +1,30 @@
 <h1><%= @group.name.capitalize%></h1>
-<div style="text-align:center;border:1px solid black;">
-  <% if @group.is_member? current_user %>
-    You are a member of this group
-  <% elsif @group.pending_member? current_user %>
-    Membership is waiting review by group admin
-  <% else %>
-    <%=button_to "Request to join #{@group.name.capitalize}", "/group_memberships?user_id=#{current_user.id}&group_id=#{@group.id}", :method => :post %>
+
+  <% if @group.pending_member? current_user %>
+    <div style="text-align:center;border:1px solid black;">
+      Membership is waiting review by group admin
+    </div>
+  <% elsif !@group.is_member?(current_user) %>
+    <div style="text-align:center;border:1px solid black;">
+      <%=button_to "Request to join #{@group.name.capitalize}", "/group_memberships?user_id=#{current_user.id}&group_id=#{@group.id}", :method => :post %>
+    </div>
   <%end %>
+<div style="border:1px solid black;">
+  <u><p style="text-align:center;">COSC 612 Message Board</p></u>
+  <hr style="margin:5px;border-color:black">
+  <div style="overflow-y:scroll;height:90px">
+    <ul style="font-size:.7em;">
+      <% @group_messages.each do |message| %>
+        <li style="line-height:15px"><%=message.message + " at " + message.updated_at %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>
+
+
+
+
+
 <div style="border:1px solid black;float:left;margin:5px;width:70%">
   <div style="float:left;margin:5px">
     <h3>About <%= @group.name.capitalize%></h3>

@@ -14,6 +14,7 @@ class GroupsController < ApplicationController
   # GET /groups/1.json
   def show
     @group = Group.find(params[:id])
+    @group_messages = GroupMessage.where(:group_id => @group.id).all.sort_by(&:created_at)[0..99]
 
     respond_to do |format|
       format.html # show.html.erb
