@@ -30,4 +30,8 @@ class Group < ActiveRecord::Base
   def admin
     User.find GroupMembership.where(:group_id => self.id).where(:role => MembershipRoles.admin).first.user_id
   end
+
+  def message text
+    GroupMessage.create! :message => text, :group_id => self.id
+  end
 end
