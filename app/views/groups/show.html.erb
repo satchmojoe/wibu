@@ -24,8 +24,20 @@
     <u><%= @group.name.capitalize%>'s Members</u>
     <ul>
       <% unless @group.members.empty?%>
-        <% @group.members.uniq.each do |int| %>
-          <li><%= link_to int.user_name, "/users/#{int.id}" %></liv>
+        <% if @group.admin == current_user%>
+
+          <% @group.members.uniq.each do |int| %>
+            <li>
+              <div style="float:left;width:50%"><%= link_to int.user_name, "/users/#{int.id}" %> </div>
+                                      <%=button_to "Reject", "/group_memberships/#{GroupMembership.where(:user_id => int.id).where(:group_id => @group.id).first.group_id}", :method => :delete %>
+            </li>
+          <% end %>
+
+
+        <% else %>
+          <% @group.members.uniq.each do |int| %>
+            <li><%= link_to int.user_name, "/users/#{int.id}" %></liv>
+          <% end %>
         <% end %>
       <% end %>
     </ul>
