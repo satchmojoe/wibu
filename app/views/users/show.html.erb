@@ -45,7 +45,9 @@
     <ul>
       <% unless @user.groups.empty?%>
         <% @user.groups.each do |int| %>
-          <li><%= link_to int.name, "/groups/#{int.id}" %></liv>
+          <% if (GroupMembership.where(:group_id => int.id).where(:user_id => @user.id).count > 0) && (GroupMembership.where(:group_id => int.id).where(:user_id => @user.id).first.role != MembershipRoles.pending) %>
+            <li><%= link_to int.name, "/groups/#{int.id}" %></liv>
+          <% end %>
         <% end %>
       <% end %>
     </ul>
@@ -66,6 +68,17 @@
     <%= form_for @user do |f|%>
       <%= f.file_field :document %></br>
       <%= f.submit 'Upload'%>
+    <% end %>
+  </div>
+  <div>
+    <% if @pendings.length > 0 %>
+      <hr style="border-color:black">
+      <u><%= @user.user_name.capitalize%>'s Pending Memberships</u>
+      <ul>
+        <% @pendings.each do |int| %>
+          <li><%= link_to int.name, "/groups/#{int.id}" %></liv>
+        <% end %>
+      </ul>
     <% end %>
   </div>
 </div>
