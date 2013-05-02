@@ -26,4 +26,12 @@ class Group < ActiveRecord::Base
   def pending_memberships
     GroupMembership.where(:role => MembershipRoles.pending).where(:group_id => self.id).all
   end
+
+  def admin
+    User.find GroupMembership.where(:group_id => self.id).where(:role => MembershipRoles.admin).first.user_id
+  end
+
+  def message text
+    GroupMessage.create! :message => text, :group_id => self.id
+  end
 end

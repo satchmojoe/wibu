@@ -45,7 +45,9 @@
     <ul>
       <% unless @user.groups.empty?%>
         <% @user.groups.each do |int| %>
-          <li><%= link_to int.name, "/groups/#{int.id}" %></liv>
+          <% if (GroupMembership.where(:group_id => int.id).where(:user_id => @user.id).count > 0) && (GroupMembership.where(:group_id => int.id).where(:user_id => @user.id).first.role != MembershipRoles.pending) %>
+            <li><%= link_to int.name, "/groups/#{int.id}" %></liv>
+          <% end %>
         <% end %>
       <% end %>
     </ul>
@@ -68,4 +70,18 @@
       <%= f.submit 'Upload'%>
     <% end %>
   </div>
+<<<<<<< HEAD
+=======
+  <div>
+    <% if @pendings.length > 0 %>
+      <hr style="border-color:black">
+      <u><%= @user.user_name.capitalize%>'s Pending Memberships</u>
+      <ul>
+        <% @pendings.each do |int| %>
+          <li><%= link_to int.name, "/groups/#{int.id}" %></liv>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+>>>>>>> db102edc55d40f09025627c7257e34286438e39d
 </div>

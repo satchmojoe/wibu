@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   def show
     params[:id] ||= current_user.id
     @user = User.find(params[:id])
+    @pendings = GroupMembership.where(:user_id => @user.id).where(:role => MembershipRoles.pending).all.map{|gm| Group.find gm.group_id}
 
     respond_to do |format|
       format.html # show.html.erb
