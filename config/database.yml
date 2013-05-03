@@ -20,7 +20,7 @@ test:
 
 production:
   adapter: mysql2
-  database: wibu_production
-  username: wibudb
-  password: password
+  database: wibu
+  username: admintCT7Y8G
+  password: Li4FSQQ5tDya
 
