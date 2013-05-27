@@ -17,13 +17,13 @@
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.text_area :description , {:style => "width:50%"}%>
   </div>
   <div class="field">
-    <%= f.label :group_id %><br />
-    <%= f.number_field :group_id %>
+    <%= f.hidden_field :group_id, {:value => (@project.group_id || @group.id)} %>
   </div>
   <div class="actions">
     <%= f.submit %>
+    <%= link_to 'Cancel', Group.find(params[:group_id]) %>
   </div>
 <% end %>

@@ -1,4 +1,6 @@
-class ProjectsController < ApplicationController
+class ProjectsController < ApplicationController 
+before_filter :group_member
+
   # GET /projects
   # GET /projects.json
   def index
@@ -14,6 +16,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @project = Project.find(params[:id])
+    @group = Group.find @project.group_id
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,6 +27,7 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   # GET /projects/new.json
   def new
+    @group = Group.find params[:group_id]
     @project = Project.new
 
     respond_to do |format|
@@ -80,4 +84,20 @@ class ProjectsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+
+  def group_member
+    permission = false
+    permission = Group.find(Project.find(params[:id]).group_id).members.include?(current_user) if params[:id]
+    permission =  Group.find(params[:group_id]).members.include?(current_user) if params[:group_id]
+    permission =  Group.find(params[:project][:group_id]).members.include?(current_user) if params[:project] and params[:project][:group_id]
+    if !permission
+      respond_to do |format|
+        format.html { redirect_to root_path}
+        format.json { head :no_content }
+      end
+    end
+  end
+
 end

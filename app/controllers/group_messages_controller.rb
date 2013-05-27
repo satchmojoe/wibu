@@ -40,15 +40,16 @@ class GroupMessagesController < ApplicationController
   # POST /group_messages
   # POST /group_messages.json
   def create
-    @group_message = GroupMessage.new(params[:group_message])
+    @group_message = GroupMessage.new(:message => "#{current_user.user_name} said: #{params['message']}", :group_id => params["group_id"])
+    @group = Group.find params["group_id"]
 
     respond_to do |format|
-      if @group_message.save
-        format.html { redirect_to @group_message, notice: 'Group message was successfully created.' }
-        format.json { render json: @group_message, status: :created, location: @group_message }
+      if @group_message.save and @group.is_member? current_user
+        format.html { redirect_to @group, notice: 'Group message was successfully created.' }
+        format.json { render json: @group, status: :created, location: @group_message }
       else
-        format.html { render action: "new" }
-        format.json { render json: @group_message.errors, status: :unprocessable_entity }
+        format.html { redirect_to @group, notice: 'Not allowed. You must join the group first.' }
+        format.json { render json: @group.errors, status: :unprocessable_entity }
       end
     end
   end

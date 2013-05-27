@@ -8,6 +8,7 @@ gem 'mysql2', '0.3.11'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'simplecov', :require => false, :group => :test
 gem 'carrierwave'
+gem "kaminari"
 
 
 # Gems used only for assets and not required

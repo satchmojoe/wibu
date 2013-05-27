@@ -38,6 +38,8 @@ Wibu::Application.routes.draw do
   put "/sessions/update_password"
   get "forgot_pw" => "users#forgot_pw", :as => "forgot_pw"
   post "retrieve_pw" => "users#retrieve_pw", :as => "retrieve_pw"
+  get "/uploads" => "documents#show" 
+  match "uploads(/:id(/:file_name))" => "documents#show"
 
   resources :sessions
   root :to => "users#show"

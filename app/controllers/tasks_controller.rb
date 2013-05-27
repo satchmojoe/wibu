@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  before_filter :group_member
+
   # GET /tasks
   # GET /tasks.json
   def index
@@ -24,7 +26,7 @@ class TasksController < ApplicationController
   # GET /tasks/new
   # GET /tasks/new.json
   def new
-    @task = Task.new
+    @task = Task.new :project_id => params[:project_id]
 
     respond_to do |format|
       format.html # new.html.erb
@@ -44,11 +46,11 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to @task, notice: 'Task was successfully created.' }
-        format.json { render json: @task, status: :created, location: @task }
+        format.html { redirect_to @task.project, notice: 'Task was successfully created.' }
+        format.json { render json: @task.project, status: :created, location: @task.project }
       else
         format.html { render action: "new" }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
+        format.json { render json: @task.project.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -60,11 +62,11 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.update_attributes(params[:task])
-        format.html { redirect_to @task, notice: 'Task was successfully updated.' }
-        format.json { head :no_content }
+        format.html { redirect_to @task.project, notice: 'Task was successfully updated.' }
+        format.json { render json: @task.project, status: :created, location: @task.project }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
+        format.html { render action: "new" }
+        format.json { render json: @task.project.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -76,8 +78,23 @@ class TasksController < ApplicationController
     @task.destroy
 
     respond_to do |format|
-      format.html { redirect_to tasks_url }
+      format.html { redirect_to @task.project }
       format.json { head :no_content }
+    end
+  end
+  private
+
+  def group_member
+    permission = false
+    permission = Group.find(Task.find(params[:id]).group_id).members.include?(current_user) if params[:id]
+    permission = Group.find(Project.find(params[:project_id]).group_id).members.include?(current_user) if params[:project_id]
+    permission = Group.find(Project.find(params[:task][:project_id]).group_id).members.include?(current_user) if params[:task] and params[:task][:project_id]
+    permission =  Group.find(params[:group_id]).members.include?(current_user) if params[:group_id]
+    if !permission
+      respond_to do |format|
+        format.html { redirect_to root_path}
+        format.json { head :no_content }
+      end
     end
   end
 end

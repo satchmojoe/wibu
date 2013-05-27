@@ -57,6 +57,9 @@ class GroupMembershipsController < ApplicationController
   # PUT /group_memberships/1.json
   def update
     @group_membership = GroupMembership.find(params[:id])
+    if @group_membership.joining? params
+      GroupMessage.create! :group_id => @group_membership.group_id, :message => "#{User.find(@group_membership.user_id).user_name} joined #{Group.find(@group_membership.group_id).name}"
+    end
 
     respond_to do |format|
       if @group_membership.update_attributes(:role => params[:role])
@@ -72,6 +75,7 @@ class GroupMembershipsController < ApplicationController
   def destroy
     @group_membership = GroupMembership.find(params[:id])
     @group_membership.destroy
+    GroupMessage.create! :group_id => @group_membership.group_id, :message => "#{User.find(@group_membership.user_id).user_name} left #{Group.find(@group_membership.group_id).name}"
 
     respond_to do |format|
       format.html { redirect_to Group.find(@group_membership.group_id), notice: "#{User.find(@group_membership.user_id).user_name} rejected." }

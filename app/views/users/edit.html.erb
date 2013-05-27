@@ -1,32 +1,44 @@
 <h1>Editing user</h1>
   <%= form_for(@user) do |f| %>
     <div class="field">
-      <%= f.label :email %><br />
+      <%= f.label :email %>
       <%= f.text_field :email %>
     </div>
     <div class="field">
-      <%= f.label :bio %><br />
+      <%= f.label :bio %>
       <%= f.text_field :bio %>
     </div>
     <div class="field">
-      <%= f.label :city %><br />
+      <%= f.label :city %>
       <%= f.text_field :city %>
     </div>
     <div class="field">
-      <%= f.label :state %><br />
+      <%= f.label :state %>
       <%= f.text_field :state %>
     </div>
     <div class="field">
-      <%= f.label :interests %><br />
-      <%= f.select :interests, options_from_collection_for_select(Interest.all, :id, :text, @interest_list),{},{:multiple => true, :size => 5} %>
+      <%= f.label :interests %>
+      <% if !interest_list.empty? %>
+        <input type="text" name="user[interests]" id="user_interests" value=<%= interest_list%> />
+      <% else %>
+        <input type="text" name="user[interests]" id="user_interests" %>
+      <% end %>
     </div>
     <div class="field">
-      <%= f.label :expertises %><br />
-      <%= f.select :expertises, options_from_collection_for_select(Expertise.all, :id, :text, @expertise_list),{},{:multiple => true, :size => 5} %>
+      <%= f.label :expertises %>
+      <% if !expertise_list.empty? %>
+        <input type="text" name="user[expertises]" id="user_expertises" value=<%= expertise_list %> />
+      <% else %>
+        <input type="text" name="user[expertises]" id="user_expertises" %>
+      <% end %>
     </div>
     <div class="field">
-      <%= f.label :institutions %><br />
-      <%= f.select :institutions, options_from_collection_for_select(Institution.all, :id, :text, @institution_list),{},{:multiple => true, :size => 5} %>
+      <%= f.label :institutions %>
+      <% if !institution_list.empty? %>
+        <input type="text" name="user[institutions]" id="user_institutions" value=<%= institution_list %> />
+      <% else %>
+        <input type="text" name="user[institutions]" id="user_institutions" %>
+      <% end %>
     </div>
     <div class="actions">
       <%= f.submit %>
@@ -34,3 +46,25 @@
   <% end %>
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
+<script type="text/javascript">
+  var interests= [];
+  <% Interest.all.each do |i| %>
+    interests[interests.length] = "<%= i.text %>"
+  <% end %>
+
+  var expertises= [];
+  <% Expertise.all.each do |i| %>
+    expertises[expertises.length] = "<%= i.text %>"
+  <% end %>
+
+  var institutions= [];
+  <% Institution.all.each do |i| %>
+    institutions[institutions.length] = "<%= i.text %>"
+  <% end %>
+
+  $(function() {
+    $("#user_interests").multiselect({completions: interests});
+    $("#user_expertises").multiselect({completions: expertises});
+    $("#user_institutions").multiselect({completions: institutions});
+  });
+</script>

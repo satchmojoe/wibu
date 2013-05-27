@@ -11,18 +11,28 @@ class User < ActiveRecord::Base
   has_many :groups, :through => :group_memberships
 
   before_save :encrypt_password
+  before_save :handle_bio
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
-  before_save :handle_bio
+  validates_presence_of :user_name
+  validates_presence_of :email
+
+  validates_uniqueness_of :email, :case_sensitive => false
+  validates_uniqueness_of :user_name, :case_sensitive => false
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 
   def groups
     self.group_memberships.map{ |m| Group.find(m.group_id) }
   end
 
   def self.parse_params_for_habtms params
-    params[:user]["interests"] = params[:user]["interests"].map{ |i| (i.empty? ? nil : Interest.find(i.to_i))}.delete_if{|x| x == nil} if params[:user]["interests"]
-    params[:user]["institutions"] = params[:user]["institutions"].map{ |i| (i.empty? ? nil : Institution.find(i.to_i))}.delete_if{|x| x == nil} if params[:user]["institutions"]
-    params[:user]["expertises"] = params[:user]["expertises"].map{ |i| (i.empty? ? nil : Expertise.find(i.to_i))}.delete_if{|x| x == nil} if params[:user]["expertises"]
+    params[:user]["interests"] = params[:user]["interests"].gsub(" ","_").split(',').collect{|i| (Interest.find_by_text(i) || Interest.create!(:text => i))}.delete_if{|x| x == nil} if params[:user]["interests"]
+
+
+    params[:user]["institutions"] = params[:user]["institutions"].gsub(" ","_").split(',').collect{|i| (Institution.find_by_text(i) || Institution.create!(:text => i))}.delete_if{|x| x == nil} if params[:user]["institutions"]
+
+    params[:user]["expertises"] = params[:user]["expertises"].gsub(" ","_").split(',').collect{|i| (Expertise.find_by_text(i) || Expertise.create!(:text => i))}.delete_if{|x| x == nil} if params[:user]["expertises"]
+
     params
   end
 

@@ -1,18 +1,110 @@
-<p>
-  <b>Name:</b>
-  <%= @project.name %>
-</p>
+<div class="hero-unit" style="height:100%;width:90%;padding:10px;padding-top:60px">
+  <h1><a href=<%= "/groups/#{@project.group_id}/"%>><%= Group.find(@project.group_id).name.capitalize %></a></h1>
+  <h2>Project: <%= @project.name %></h2> 
+  <h3>Description:</h3>
+  <p style="font-size:16px"><%= @project.description %></p>
+  
+  <div style="float:left;margin:5px;width:68%;font-size:16px">
+    <h3>Tasks</h3>
+    <% if @project.tasks.count > 0 %> 
+      <style type="text/css">
+        td {vertical-align:top;border:1px solid black;width:18%}
+      </style>
+      <div style="float:left;margin:5px;width:100%">
+        <table>
+          <tr style="border-bottom: 1px solid;border-right:none">
+            <td><b>Title</b></td>
+            <td><b>Description</b></td>
+            <td><b>Status</b></td>
+            <td><b>Owner</b></td>
+            <td><b>Deadline</b></td>
+            <td><b>Edit</b></td>
+            <td><b>Drop</b></td>
+          </tr>
+          <% @project.tasks.each do |task| %>
+            <tr>
+              <td><%=task.name%></td>
+              <td><%=task.description%></td>
+              <td><%=task.status%></td>
+              <td><%=task.owner%></td>
+              <td><%= task.deadline.to_s%></td>
+              <td><a href=<%="/tasks/#{task.id}/edit"%>>Edit</a></td>
+              <td><%= button_to "drop", {:controller => :tasks, :action => 'destroy', :id => task.id }, {:onclick => "return confirm('Are you sure?')", :method => :delete, :remote => true}%></td>
 
-<p>
-  <b>Description:</b>
-  <%= @project.description %>
-</p>
+            </tr>
+          <% end %>
+        </table>
+      </div></br>
+    <% end %>
+    <a style="width:100%;float:left" href=<%= "/tasks/new?project_id=#{@project.id}"%>>Create New Task</a>
+    <a href="#" style="float:left;width:100%;border-top:1px solid black;margin-top:40px">Edit Project</a>
+  </div>
+</div>
+<div id="sidebar" style="border:1px solid black;text-align:centerwidth:30%;float:right;margin:5px">
+  <div style="margin:5px">
+    <u><%= @group.name.capitalize%>'s Members</u>
+    <ul>
+      <% unless @group.members.empty?%>
+        <% if @group.admin == current_user%>
 
-<p>
-  <b>Group:</b>
-  <%= @project.group_id %>
-</p>
-
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+          <% @group.members.uniq.each do |int| %>
+            <li>
+              <div style="float:left;width:50%"><%= link_to int.user_name, "/users/#{int.id}" %> </div>
+              <% unless @group.is_admin? int %>
+                <%=button_to "Reject", "/group_memberships/#{GroupMembership.where(:user_id => int.id).where(:group_id => @group.id).first.id}", :method => :delete %>
+              <% end %>
+            </li>
+          <% end %>
+        <% else %>
+          <% @group.members.uniq.each do |int| %>
+            <li><%= link_to int.user_name, "/users/#{int.id}" %></liv>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div style="margin:5px">
+    <u><%= @group.name.capitalize%>'s Files</u>
+    <ul>
+      <% unless @group.documents.empty? %>
+        <% if @group.is_member? current_user %>
+          <% @group.documents.each do |int| %>
+            <li><%= link_to int.file_name, "/documents/#{int.id}" %></liv>
+          <% end %>
+        <% else %>
+          <% @group.documents.each do |int| %>
+            <li><%= int.file_name %></liv>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <% if @group.is_member? current_user %>
+    <hr style="border-color:black">
+    <div>
+      Upload File</br>
+      <%= form_for @group do |f|%>
+        <%= f.file_field :document %></br>
+        <%= f.submit 'Upload'%>
+      <% end %>
+    </div>
+  <% end %>
+  <% if @group.is_admin?(current_user) && (@group.pending_memberships.count > 0) %>
+    <hr style="border-color:black">
+    <div>
+      Pending Memberships
+      <ul>
+        <style type="text/css">
+          .button_to {float:left;margin:0px}
+        </style>
+        <% @group.pending_memberships.each do |pm| %>
+          <li><div style="float:left"><%= pm.user.user_name %>:</div> 
+                                      <%= button_to "Accept","/group_memberships/#{pm.id}?role=#{MembershipRoles.member}", :method=>:put %> 
+                                      <%=button_to "Reject", "/group_memberships/#{pm.id}", :method => :delete %>
+          </li>
+          <hr style="border-color:black;margin:0 0 5px">
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

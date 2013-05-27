@@ -1,5 +1,5 @@
 <h1><%= @user.user_name.capitalize%>'s Profile</h1>
-<div style="border:1px solid black;float:left;margin:5px;width:70%">
+<div style="border:1px solid black;float:left;margin:5px;width:55%">
   <h3><%= @user.user_name.capitalize%>'s Bio</h3>
   <div style="float:left;margin:5px">
     <h4><u>About <%= @user.user_name.capitalize%></u></h4>
@@ -20,8 +20,8 @@
     
     <h4><u><%= @user.user_name.capitalize%>'s Areas of Expertise</u></h4>
     <ul>
-      <% unless @user.institutions.empty?%>
-        <% @user.institutions.each do |int| %>
+      <% unless @user.expertises.empty?%>
+        <% @user.expertises.each do |int| %>
           <li><%= int.text %></liv>
         <% end %>
       <% end %>
@@ -30,8 +30,8 @@
     
     <h4><u><%= @user.user_name.capitalize%>'s Institutions</u></h4>
     <ul>
-      <% unless @user.expertises.empty?%>
-        <% @user.expertises.each do |int| %>
+      <% unless @user.institutions.empty?%>
+        <% @user.institutions.each do |int| %>
           <li><%= int.text %></liv>
         <% end %>
       <% end %>
@@ -57,7 +57,7 @@
     <ul>
       <% unless @user.documents.empty? %>
         <% @user.documents.each do |int| %>
-          <li><%= link_to int.file_name, "/documents/#{int.id}" %></liv>
+          <li><%= link_to int.file_name, int.document.url %></liv>
         <% end %>
       <% end %>
     </ul>
@@ -65,13 +65,8 @@
   <hr style="border-color:black">
   <div>
     Upload File</br>
-    <%= form_for @user do |f|%>
-      <%= f.file_field :document %></br>
-      <%= f.submit 'Upload'%>
-    <% end %>
+    <%= render "documents/form"%>
   </div>
-<<<<<<< HEAD
-=======
   <div>
     <% if @pendings.length > 0 %>
       <hr style="border-color:black">
@@ -83,5 +78,4 @@
       </ul>
     <% end %>
   </div>
->>>>>>> db102edc55d40f09025627c7257e34286438e39d
 </div>

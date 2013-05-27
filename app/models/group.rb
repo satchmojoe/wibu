@@ -6,6 +6,10 @@ class Group < ActiveRecord::Base
   has_many :projects
   has_many :group_memberships, :dependent => :destroy
   has_many :users, :through => :group_memberships
+  validates_uniqueness_of :name
+
+  validates_presence_of :name, :case_sensitive => false
+  validates_presence_of :description
 
   def members
     GroupMembership.where(:group_id => self.id).find(:all, :conditions => ["role = ? OR role = ?", MembershipRoles.admin, MembershipRoles.member]).map{|gm| User.find gm.user_id}

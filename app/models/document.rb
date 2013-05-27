@@ -6,6 +6,9 @@ class Document < ActiveRecord::Base
   belongs_to :group
 
   mount_uploader :document, DocumentsUploader
+  validates_presence_of :document
+
+  before_save :check_extension
 
   def self.upload_doc doc, owner
     new_document = Document.new :document => doc, :file_name => doc.original_filename
@@ -27,5 +30,22 @@ class Document < ActiveRecord::Base
     else
       return false
     end
+  end
+
+  def set_up request
+    if "users" == request.env["HTTP_REFERER"].split("#{request.protocol}#{request.host_with_port}")[1].split('/')[1]
+      self.user_id = request.env["HTTP_REFERER"].split("#{request.protocol}#{request.host_with_port}")[1].split('/')[2]
+    elsif "groups" == request.env["HTTP_REFERER"].split("#{request.protocol}#{request.host_with_port}")[1].split('/')[1]
+      self.group_id = request.env["HTTP_REFERER"].split("#{request.protocol}#{request.host_with_port}")[1].split('/')[2]
+    end
+    self.url = self.document.url
+    self.file_name = self.document.filename
+    self.save
+  end
+  
+  private
+  
+  def check_extension
+    ['txt', 'doc', 'docx', 'pdf', 'jpeg', 'odt', 'png', 'zip', 'tar', 'gzip', 'tar.gzip'].include? self.document.to_s.split('.')[1]
   end
 end

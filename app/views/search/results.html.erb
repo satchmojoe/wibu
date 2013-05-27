@@ -3,16 +3,38 @@
   <style type="text/css">
     p {margin:0px;line-height:20px;font-size:.7em}
     a {font-size:.9em}
+    table {text-align:left}
+    tr {line-height: 40px; }
+    th {text-decoration: underline}
   </style>
-<% @results.each do |result|%>
-  <div style="margin:0px 0px 20px 0px">
-    <a href= "/<%=result[:type].downcase%>s/<%=result[:id]%>" ><strong><%= result[:type]%>: </strong> <%= result[:name].gsub(params[:search], "<mark>#{params[:search]}</mark>").html_safe %></a>
 
-    <% if result[:type] == "User" %>
-      <p>Bio: <%= User.find(result[:id]).bio.gsub(Regexp.new(params[:search],"i")){|r| "<mark>#{r}</mark>"}.html_safe%></p>
-    <% elsif result[:type] == "Group" %>
-      <p style="width:500px">Description<%= Group.find(result[:id]).description.gsub(Regexp.new(params[:search],"i")){|r| "<mark>#{r}</mark>"}.html_safe%></p>
+
+  <table id="results">
+    <thead>
+      <tr>
+        <th style="width:15%">Object</th>
+        <th style="width:25%">Name</th>
+        <th>Info</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @results.each do |result|%>
+      <tr>
+        <td><strong><%= result[:type]%></strong> </td>
+        <td><a href= "/<%=result[:type].downcase%>s/<%=result[:id]%>" ><strong> <%= result[:name].gsub(Regexp.new(params[:search],"i"), "<mark>#{params[:search]}</mark>").html_safe %></a></td>
+
+        <% if result[:type] == "User" %>
+          <td><p><strong>Bio: </strong><%= User.find(result[:id]).bio.gsub(Regexp.new(params[:search],"i")){|r| "<mark>#{r}</mark>"}.html_safe%></p></td>
+        <% elsif result[:type] == "Group" %>
+          <td><p style="width:500px"><strong>Description: </strong><%= Group.find(result[:id]).description.gsub(Regexp.new(params[:search],"i")){|r| "<mark>#{r}</mark>"}.html_safe%></p></td>
+        <% end %>
+      </tr>
     <% end %>
-  </div>
-<% end %>
+    </tbody>
+  </table>
 
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#results').dataTable();
+  } );
+</script>

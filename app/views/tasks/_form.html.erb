@@ -11,31 +11,42 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :project_id %><br />
-    <%= f.number_field :project_id %>
-  </div>
-  <div class="field">
-    <%= f.label :deadline %><br />
-    <%= f.date_select :deadline %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="hero-unit" style="height:100%;width:90%;padding:10px;padding-top:60px">
+    <h1><%= Group.find(@task.project.group_id).name.capitalize %></h1>
+    <h2>Project: <%= @task.project.name %></h2> 
+    <div style="border:1px solid black;float:left;margin:5px;width:80%">
+      <h3>Create Task</h3>
+      <style type="text/css">
+        td {vertical-align:top;border:1px solid black;width:18%}
+      </style>
+      <div class="field">
+        <%= f.label :Title %>
+        <%= f.text_field :name, {:placeholder=> 'Title'} %>
+      </div>
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_field :description, {:placeholder=> 'Description'}  %>
+      </div>
+      <div class="field">
+        <%= f.hidden_field :project_id, {:value => (@task.project_id || @project.id)} %>
+      </div>
+      <div class="field">
+        <%= f.label :deadline %>
+        <%= f.date_select :deadline  %>
+      </div>
+      <div class="field">
+        <%= f.label :status %>
+        <%= f.select :status, StatusOptions.all %>
+      </div>
+      <div class="field">
+        <%= f.label :user_id %>
+        <%= f.select :user_id, options_from_collection_for_select(@task.group.members, 'id', 'user_name') %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+        <%= link_to 'Cancel', Project.find(@task.project_id) %>
+      </div>
+    </div>
   </div>
 <% end %>
+

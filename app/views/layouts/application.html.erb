@@ -27,9 +27,12 @@
                   <li><a href=<%= change_password_path%>>Change Password</a></li>
                   <li><a href="/users/<%=current_user.id%>/edit">Edit Profile</a></li>
                   <li class="divider"></li>
-                  <li class="nav-header">Nav header</li>
-                  <li><a href="#">Study Group 1</a></li>
-                  <li><a href="#">Study Group 2</a></li>
+                  <li class="nav-header">My Groups</li>
+                  <% current_user.groups.each do |int| %>
+                    <% if (GroupMembership.where(:group_id => int.id).where(:user_id => current_user.id).count > 0) && (GroupMembership.where(:group_id => int.id).where(:user_id => current_user.id).first.role != MembershipRoles.pending) %>
+                      <li><%= link_to int.name, "/groups/#{int.id}" %></liv>
+                    <% end %>
+                  <% end %>
                 </ul>
               </li>
             <% else %>
@@ -37,9 +40,7 @@
             <% end %>
           </ul>
           <% if current_user %>
-            
-
-            <%= form_tag "/search/results", :class=>"navbar-form pull-right",:method => 'get' do %>
+            <%= form_tag "/search/results", :class=>"navbar-form pull-right",:method => 'get', :style => "float:left;margin:0px" do %>
                 <%= text_field_tag :search, params[:search], {:placeholder => "Search Terms", :class => "span2"} %>
                 <%= submit_tag "Search", {:name => nil ,:style=>"height:30px"}%>
             <% end %>
@@ -58,7 +59,7 @@
     </div>
   </div>
   <div id="content" style="margin-top:50px">
-    <div class="container" style="width:95%" >
+    <div class="container" style="width:85%" >
       <div class="hero-unit" style="height:100%;float:left;width:90%">
 
         <p id="notice"><%= notice %></p>

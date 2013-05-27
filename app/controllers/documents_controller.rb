@@ -1,6 +1,7 @@
 class DocumentsController < ApplicationController
   # GET /documents
   # GET /documents.json
+
   def index
     @documents = Document.all
 
@@ -14,12 +15,7 @@ class DocumentsController < ApplicationController
   # GET /documents/1.json
   def show
     @document = Document.find(params[:id])
-    if @document.download_permitted? current_user
-      send_file @document.url
-    else
-      tmp = request.env["HTTP_REFERER"].split "/"
-      redirect_to "/"+tmp[tmp.length-2].concat('/'+tmp[tmp.length-1]), notice: "File not available for you to download"
-    end
+    send_file @document.document.path
   end
 
   # GET /documents/new
@@ -42,13 +38,13 @@ class DocumentsController < ApplicationController
   # POST /documents.json
   def create
     @document = Document.new(params[:document])
-
     respond_to do |format|
       if @document.save
-        format.html { redirect_to @document, notice: 'Document was successfully created.' }
+        @document.set_up request
+        format.html { redirect_to request.env["HTTP_REFERER"], notice: 'Document was successfully created.' }
         format.json { render json: @document, status: :created, location: @document }
       else
-        format.html { render action: "new" }
+        format.html { redirect_to request.env["HTTP_REFERER"], notice: 'Error with upload. Make sure document is accessible and of supported file type.' }
         format.json { render json: @document.errors, status: :unprocessable_entity }
       end
     end
@@ -81,4 +77,5 @@ class DocumentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end

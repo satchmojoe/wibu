@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :log_in, :only => [:new, :create, :forgot_pw, :retrieve_pw]
+  before_filter :current_user?, :only => [:update, :edit, :destroy]
 
   # GET /users
   # GET /users.json
@@ -16,6 +17,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     params[:id] ||= current_user.id
+    @document = Document.new
     @user = User.find(params[:id])
     @pendings = GroupMembership.where(:user_id => @user.id).where(:role => MembershipRoles.pending).all.map{|gm| Group.find gm.group_id}
 
@@ -66,7 +68,6 @@ class UsersController < ApplicationController
   # PUT /users/1.json
   def update
     @user = User.find(User.parse_params_for_habtms(params)[:id])
-
     #Uploaded documents are not attributes of user and aren't updated as such
     if params[:user][:document]
       Document.upload_doc(params[:user][:document],current_user)
@@ -113,6 +114,14 @@ class UsersController < ApplicationController
       end
     else
       redirect_to log_in_path, :notice => "Error resetting password."
+    end
+  end
+
+  private
+
+  def current_user?
+    unless User.find(params[:id]) == current_user
+      redirect_to root_path, :notice => "That action is not permitted"
     end
   end
 end

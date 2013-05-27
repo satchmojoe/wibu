@@ -7,4 +7,8 @@ class GroupMembership < ActiveRecord::Base
   def member
     self.user
   end
+
+  def joining? params
+    self.role == MembershipRoles.pending && params[:role] && params[:role] == MembershipRoles.member
+  end
 end

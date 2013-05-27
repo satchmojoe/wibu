@@ -11,9 +11,6 @@ td {text-align:center}
     <th>Bio</th>
     <th>City</th>
     <th>State</th>
-    <th>Password hash</th>
-    <th>Password salt</th>
-    <th>Tmp password hash</th>
     <th>Interests</th>
     <th>Expertises</th>
     <th>Institutions</th>
@@ -29,15 +26,10 @@ td {text-align:center}
     <td><%= user.bio %></td>
     <td><%= user.city %></td>
     <td><%= user.state %></td>
-    <td><%= user.password_hash %></td>
-    <td><%= user.password_salt %></td>
-    <td><%= user.tmp_password_hash %></td>
     <td style="width:200px" ><%= collection_display user.interests %></td>
     <td style="width:200px" ><%= collection_display user.expertises %></td>
     <td style="width:200px" ><%= collection_display user.institutions %></td>
     <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

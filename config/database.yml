@@ -20,7 +20,10 @@ test:
 
 production:
   adapter: mysql2
-  database: wibu
-  username: admintCT7Y8G
-  password: Li4FSQQ5tDya
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>
+  host: <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
+  port: <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
+  username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
+
 

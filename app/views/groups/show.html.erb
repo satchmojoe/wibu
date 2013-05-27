@@ -14,16 +14,11 @@
   <div style="overflow-y:scroll;height:90px">
     <ul style="font-size:.7em;">
       <% @group_messages.each do |message| %>
-        <li style="line-height:15px"><%=message.message + " at " + message.updated_at %></li>
+        <li style="line-height:15px"><%=message.message + " at " + message.updated_at.to_s.split(' -')[0] %></li>
       <% end %>
     </ul>
   </div>
 </div>
-
-
-
-
-
 <div style="border:1px solid black;float:left;margin:5px;width:70%">
   <div style="float:left;margin:5px">
     <h3>About <%= @group.name.capitalize%></h3>
@@ -31,10 +26,22 @@
       <%= @group.description %>
     </p>
     <hr style="border-color:black">
-    
+    <h4><u><%= @group.name.capitalize %> Projects</u></h4>
+    <ul>
+      <% @group.projects.each do |proj| %>
+        <% if @group.is_member?(current_user) %>
+          <li><a href = <%="/projects/#{proj.id}"%>><%= proj.name %></a></li>
+        <% else %>
+          <li><%= proj.name %></li>
+        <% end %>
+      <% end %>
+    </ul>
+    <% if @group.is_member?(current_user) %>
+      <hr style="border-color:black">
+      <a href=<%="/projects/new?group_id=#{@group.id}"%>>Create New Project</a>
+    <% end %> 
   </div>
 </div>
-
 <div id="sidebar" style="border:1px solid black;text-align:centerwidth:30%;float:right;margin:5px">
   <div style="margin:5px">
     <u><%= @group.name.capitalize%>'s Members</u>
@@ -45,11 +52,11 @@
           <% @group.members.uniq.each do |int| %>
             <li>
               <div style="float:left;width:50%"><%= link_to int.user_name, "/users/#{int.id}" %> </div>
-                                      <%=button_to "Reject", "/group_memberships/#{GroupMembership.where(:user_id => int.id).where(:group_id => @group.id).first.group_id}", :method => :delete %>
+              <% unless @group.is_admin? int %>
+                <%=button_to "Reject", "/group_memberships/#{GroupMembership.where(:user_id => int.id).where(:group_id => @group.id).first.id}", :method => :delete %>
+              <% end %>
             </li>
           <% end %>
-
-
         <% else %>
           <% @group.members.uniq.each do |int| %>
             <li><%= link_to int.user_name, "/users/#{int.id}" %></liv>
@@ -64,7 +71,7 @@
       <% unless @group.documents.empty? %>
         <% if @group.is_member? current_user %>
           <% @group.documents.each do |int| %>
-            <li><%= link_to int.file_name, "/documents/#{int.id}" %></liv>
+            <li><%= link_to int.file_name, int.document.url %></liv>
           <% end %>
         <% else %>
           <% @group.documents.each do |int| %>
@@ -78,9 +85,15 @@
     <hr style="border-color:black">
     <div>
       Upload File</br>
-      <%= form_for @group do |f|%>
-        <%= f.file_field :document %></br>
-        <%= f.submit 'Upload'%>
+      <%= render "documents/form"%>
+    </div>
+    <hr style="border-color:black">
+    <div>
+      Post Group Message </br>
+      <%= form_tag "/group_messages", :class=>"navbar-form pull-right",:method => 'post', :style => "float:left;margin:0px" do %>
+          <%= text_area_tag :message, params[:group_message], {:placeholder => "Insert message here", :class => "span2", :style => "width:200px"} %>
+          <%= hidden_field_tag :group_id, @group.id %>
+          <%= submit_tag "Post", {:name => nil ,:style=>"height:30px"}%>
       <% end %>
     </div>
   <% end %>

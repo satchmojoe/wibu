@@ -1,12 +1,7 @@
-<h1>Groups</h1>
+<h1>Groups</h1></br>
+<div id="groups"%>
+<%= render @groups %>
 
-<% @groups.each do |group| %>
-  <div>
-    <a href= <%= "/groups/#{group.id}" %>><strong><%= "#{group.class}: "%></strong><%= group.name %></a>
-    <p><%= group.description %><p>
-  </div>
-<% end %>
-
-<br />
-
+<%= paginate @groups %>
+<hr style="margin:5px;border-color:black">
 <%= link_to 'New Group', new_group_path %>
